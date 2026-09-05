@@ -11,7 +11,7 @@
 
 If you discover a security vulnerability within Product Workflow for WooCommerce, please do not open a public issue.
 
-Instead, please send an email to **aliab.dev@gmail.com** (or reach out via [aliabdollahzadeh.dev](https://aliabdollahzadeh.dev/)).
+Instead, please send an email to **al.abdollahzadeh@gmail.com** (or reach out via [aliabdollahzadeh.dev](https://aliabdollahzadeh.dev/)).
 
 Please provide:
 - A clear description of the vulnerability.
