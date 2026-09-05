@@ -83,7 +83,7 @@ Workers only see and edit their assigned tasks—they never get unrestricted acc
 1. Download or clone this repository into your WordPress plugins directory:
    ```bash
    cd wp-content/plugins/
-   git clone https://github.com/AliABZ/product-workflow.git
+   git clone https://github.com/ali-abdollahzadeh/product-workflow.git
    ```
 2. Navigate to **Plugins → Installed Plugins** in your WordPress admin dashboard.
 3. Locate **Product Workflow for WooCommerce** and click **Activate**.

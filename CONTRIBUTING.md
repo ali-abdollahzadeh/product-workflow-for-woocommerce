@@ -23,7 +23,7 @@ To get your local development environment up and running:
 2. **Clone the repository**:
    ```bash
    cd wp-content/plugins/
-   git clone https://github.com/AliABZ/product-workflow.git
+   git clone https://github.com/ali-abdollahzadeh/product-workflow.git
    ```
 
 3. **Activate the plugin**:
