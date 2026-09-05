@@ -54,8 +54,10 @@ class PWF_I18n {
         echo '<form class="pwf-language" method="post" action="' . esc_url(admin_url('admin-post.php')) . '"' . self::attributes() . '>';
         wp_nonce_field('pwf_language');
         echo '<input type="hidden" name="action" value="pwf_language"><label>' . esc_html(pwf_t('Interface language')) . ' <select name="language">';
+        $saved = get_user_meta(get_current_user_id(), 'pwf_language', true);
+        $preference = (is_string($saved) && !empty($saved)) ? $saved : (get_option('pwf_default_language', 'auto') ?: 'auto');
         foreach (self::languages() as $locale => $label) {
-            echo '<option value="' . esc_attr($locale) . '" ' . selected(self::locale(), $locale, false) . '>' . esc_html($label) . '</option>';
+            echo '<option value="' . esc_attr($locale) . '" ' . selected($preference, $locale, false) . '>' . esc_html($label) . '</option>';
         }
         echo '</select></label> <button class="button">' . esc_html(pwf_t('Apply language')) . '</button></form>';
     }

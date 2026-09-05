@@ -91,7 +91,7 @@ class PWF_Settings {
 
         global $wpdb;
         $current_lang = PWF_I18n::locale();
-        $default_lang = get_option('pwf_default_language', 'en_US');
+        $default_lang = get_option('pwf_default_language', 'auto');
         $telegram_enabled = PWF_Telegram::is_enabled();
         $telegram_token = PWF_Telegram::get_token();
         $telegram_chat = PWF_Telegram::get_default_chat_id();
@@ -171,7 +171,7 @@ class PWF_Settings {
 
         echo '<div class="pwf-lang-cards">';
         foreach ($lang_meta as $code => $info) {
-            $is_active = ($current_lang === $code || $default_lang === $code);
+            $is_active = ($default_lang === $code);
             echo '<label class="pwf-lang-card ' . ($is_active ? 'is-active' : '') . '">';
             echo '<input type="radio" name="pwf_default_language" value="' . esc_attr($code) . '" ' . checked($default_lang, $code, false) . ' class="pwf-lang-radio">';
             echo '<div class="pwf-lang-flag">' . esc_html($info['flag']) . '</div>';
