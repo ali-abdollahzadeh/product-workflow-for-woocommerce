@@ -1,0 +1,38 @@
+# Dependencies & Build artifacts
+dist/
+*.zip
+.test-runtime/
+vendor/
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+*.local
+*.docx
+
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
