@@ -22,7 +22,7 @@ class PWF_Admin {
             $is_pwf = (strpos($page, 'pwf') !== false) || (is_string($hook) && strpos($hook, 'pwf') !== false) || (function_exists('get_post_type') && get_post_type() === 'product');
             if ($is_pwf) {
                 wp_enqueue_style('dashicons');
-                $css_url = defined('PWF_URL') ? PWF_URL . 'assets/admin.css' : plugins_url('assets/admin.css', dirname(__DIR__) . '/product-workflow.php');
+                $css_url = defined('PWF_URL') ? PWF_URL . 'assets/admin.css' : plugins_url('assets/admin.css', dirname(__DIR__) . '/product-workflow-for-woocommerce.php');
                 wp_enqueue_style('pwf-admin', $css_url, array('dashicons'), PWF_VERSION);
             }
         });

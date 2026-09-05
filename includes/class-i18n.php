@@ -36,7 +36,7 @@ class PWF_I18n {
         }
         // Native WordPress gettext domain fallback
         if (function_exists('get_translations_for_domain')) {
-            $translations = get_translations_for_domain('product-workflow');
+            $translations = get_translations_for_domain('product-workflow-for-woocommerce');
             $translation = $translations->translate($text);
             if (!empty($translation) && $translation !== $text) {
                 return $translation;

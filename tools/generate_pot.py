@@ -9,7 +9,7 @@ pot_header = """# Copyright (C) 2026 Ali Abdollahzadeh
 msgid ""
 msgstr ""
 "Project-Id-Version: Product Workflow for WooCommerce 1.2.0\\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-workflow\\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-workflow-for-woocommerce\\n"
 "Last-Translator: Ali Abdollahzadeh\\n"
 "Language-Team: English\\n"
 "MIME-Version: 1.0\\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\\n"
 "POT-Creation-Date: 2026-09-05T21:00:00+00:00\\n"
 "PO-Revision-Date: 2026-09-05T21:00:00+00:00\\n"
-"X-Domain: product-workflow\\n"
+"X-Domain: product-workflow-for-woocommerce\\n"
 
 """
 
@@ -26,6 +26,6 @@ for msgid in sorted(catalog.keys()):
     clean_id = msgid.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
     entries.append(f'msgid "{clean_id}"\nmsgstr ""\n')
 
-pot_file = root / 'languages' / 'product-workflow.pot'
+pot_file = root / 'languages' / 'product-workflow-for-woocommerce.pot'
 pot_file.write_text(pot_header + '\n'.join(entries), encoding='utf-8')
 print(f'Generated {pot_file} with {len(entries)} strings.')

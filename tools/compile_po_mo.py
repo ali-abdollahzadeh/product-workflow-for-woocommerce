@@ -6,9 +6,7 @@ root = Path(__file__).resolve().parent.parent
 langs_dir = root / 'languages'
 
 def make_mo(entries):
-    # entries is a dict of {orig: trans}
     keys = sorted(entries.keys())
-    # Header format
     N = len(keys)
     orig_table = []
     trans_table = []
@@ -54,13 +52,13 @@ def generate_po(entries, locale_name):
 msgid ""
 msgstr ""
 "Project-Id-Version: Product Workflow for WooCommerce 1.2.0\\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-workflow\\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-workflow-for-woocommerce\\n"
 "POT-Creation-Date: 2026-09-05T21:00:00+00:00\\n"
 "PO-Revision-Date: 2026-09-05T21:00:00+00:00\\n"
 "MIME-Version: 1.0\\n"
 "Content-Type: text/plain; charset=UTF-8\\n"
 "Content-Transfer-Encoding: 8bit\\n"
-"X-Domain: product-workflow\\n"
+"X-Domain: product-workflow-for-woocommerce\\n"
 
 '''
     po_lines = [header]
@@ -78,14 +76,13 @@ for code, name in [('fa_IR', 'Persian'), ('it_IT', 'Italian')]:
     if not json_path.is_file():
         continue
     data = json.loads(json_path.read_text(encoding='utf-8'))
-    # Include PO header in gettext table as empty msgid
     entries_for_mo = {'': ''}
     entries_for_mo.update(data)
 
     po_content = generate_po(data, name)
-    (langs_dir / f'product-workflow-{code}.po').write_text(po_content, encoding='utf-8')
+    (langs_dir / f'product-workflow-for-woocommerce-{code}.po').write_text(po_content, encoding='utf-8')
 
     mo_bytes = make_mo(entries_for_mo)
-    (langs_dir / f'product-workflow-{code}.mo').write_bytes(mo_bytes)
+    (langs_dir / f'product-workflow-for-woocommerce-{code}.mo').write_bytes(mo_bytes)
 
-    print(f'Generated product-workflow-{code}.po and product-workflow-{code}.mo ({len(data)} strings)')
+    print(f'Generated product-workflow-for-woocommerce-{code}.po and product-workflow-for-woocommerce-{code}.mo ({len(data)} strings)')

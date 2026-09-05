@@ -10,7 +10,7 @@
  * Author URI: https://aliabdollahzadeh.dev/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: product-workflow
+ * Text Domain: product-workflow-for-woocommerce
  * Domain Path: /languages
  */
 defined('ABSPATH') || exit;
@@ -26,7 +26,7 @@ add_action('before_woocommerce_init', function () {
 });
 
 add_action('init', function () {
-    load_plugin_textdomain('product-workflow', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('product-workflow-for-woocommerce', false, dirname(plugin_basename(__FILE__)) . '/languages');
 });
 
 require_once PWF_DIR . 'includes/class-i18n.php';
