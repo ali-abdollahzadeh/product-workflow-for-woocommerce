@@ -88,12 +88,5 @@ class PWF_I18n {
 }
 
 function pwf_t($text) {
-    $translated = PWF_I18n::translate($text);
-    if ($translated !== $text) {
-        return $translated;
-    }
-    if (function_exists('__')) {
-        return __($text, 'product-workflow');
-    }
-    return $text;
+    return PWF_I18n::translate($text);
 }

@@ -32,7 +32,7 @@ Without a dedicated workflow, teams rely on scattered spreadsheets, lost chat me
 
 == External Services ==
 
-This plugin can optionally connect to the **Telegram Bot API** (`https://api.telegram.org`) to send automated task notifications, broadcast workflow updates to your team channel, and receive photo uploads sent by photographers directly into the WordPress Media Library.
+This plugin can optionally connect to the **Telegram Bot API** (`https://api.telegram.org`) to send automated task notifications, broadcast workflow updates to your team channel, allow authorized team members to interact with bot commands, and receive photo uploads sent by photographers directly into the WordPress Media Library.
 
 * **Service Provider**: Telegram FZ-LLC
 * **Service URL**: https://api.telegram.org
@@ -43,6 +43,7 @@ This plugin can optionally connect to the **Telegram Bot API** (`https://api.tel
 Connecting to Telegram is completely optional. If an administrator configures a Bot Token in the plugin settings:
 1. Product workflow event summaries (product title, stage name, task URL, and recipient Telegram Chat ID) are sent via HTTPS POST to the Telegram Bot API when workflow events occur.
 2. Inbound photos sent by authorized team members to the Telegram bot are downloaded over HTTPS from `api.telegram.org` into your WordPress uploads directory.
+3. Authorized team members may also send bot commands and product information through Telegram, including product names, SKUs, descriptions, categories, carton quantities, CBM measurements, workflow actions, and images. Telegram processes these messages and delivers them to the site's configured webhook endpoint (`/wp-json/product-workflow/v1/telegram/webhook`).
 No customer data, financial details, or order information is ever transmitted to Telegram.
 
 == Installation ==
