@@ -163,6 +163,7 @@ class PWF_Settings {
         echo '<p style="color:var(--pwf-slate-600);">' . esc_html(pwf_t('Choose the default workflow language for all team members. Individual users can still switch their preferred interface language.')) . '</p>';
 
         $lang_meta = array(
+            'auto'  => array('name' => pwf_t('WordPress Default'), 'flag' => '🌐', 'dir' => (function_exists('is_rtl') && is_rtl()) ? 'RTL' : 'LTR', 'desc' => pwf_t('Automatically follow WordPress site and user language')),
             'en_US' => array('name' => 'English', 'flag' => '🇺🇸', 'dir' => 'LTR', 'desc' => 'English (United States)'),
             'fa_IR' => array('name' => 'فارسی', 'flag' => '🇮🇷', 'dir' => 'RTL', 'desc' => 'Persian (Iran)'),
             'it_IT' => array('name' => 'Italiano', 'flag' => '🇮🇹', 'dir' => 'LTR', 'desc' => 'Italian (Italy)'),

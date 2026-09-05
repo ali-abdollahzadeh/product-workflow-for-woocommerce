@@ -292,5 +292,7 @@
     "Your Telegram ID is:": "Your Telegram ID is:",
     "Your account is not linked to any WordPress user yet. Please ask your store administrator to set your Telegram Chat ID in Workflow Settings.": "Your account is not linked to any WordPress user yet. Please ask your store administrator to set your Telegram Chat ID in Workflow Settings.",
     "Carton quantity:": "Carton quantity:",
-    "CBM:": "CBM:"
+    "CBM:": "CBM:",
+    "WordPress Default": "WordPress Default",
+    "Automatically follow WordPress site and user language": "Automatically follow WordPress site and user language"
 }

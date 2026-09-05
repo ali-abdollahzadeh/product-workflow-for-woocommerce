@@ -79,6 +79,9 @@ msgstr ""
 msgid "Attributes (one per line, e.g. Color: Red | Blue)"
 msgstr ""
 
+msgid "Automatically follow WordPress site and user language"
+msgstr ""
+
 msgid "Available actions"
 msgstr ""
 
@@ -821,6 +824,9 @@ msgid "WooCommerce edit"
 msgstr ""
 
 msgid "WooCommerce publication failed."
+msgstr ""
+
+msgid "WordPress Default"
 msgstr ""
 
 msgid "Workflow Role"

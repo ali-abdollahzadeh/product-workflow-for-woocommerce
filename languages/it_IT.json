@@ -292,5 +292,7 @@
     "Your Telegram ID is:": "Il tuo ID Telegram è:",
     "Your account is not linked to any WordPress user yet. Please ask your store administrator to set your Telegram Chat ID in Workflow Settings.": "Il tuo account non è ancora collegato a nessun utente di WordPress. Chiedi all'amministratore del negozio di impostare il tuo ID chat Telegram nelle impostazioni del flusso.",
     "Carton quantity:": "Quantità per cartone:",
-    "CBM:": "CBM:"
+    "CBM:": "CBM:",
+    "WordPress Default": "Predefinito di WordPress",
+    "Automatically follow WordPress site and user language": "Segui automaticamente la lingua del sito e dell'utente di WordPress"
 }

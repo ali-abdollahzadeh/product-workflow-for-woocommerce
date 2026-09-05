@@ -6,15 +6,20 @@ class PWF_I18n {
     private static $catalogs = array();
 
     public static function languages() {
-        return array('en_US' => 'English', 'fa_IR' => 'فارسی', 'it_IT' => 'Italiano');
+        return array(
+            'auto'  => 'WordPress Default',
+            'en_US' => 'English',
+            'fa_IR' => 'فارسی',
+            'it_IT' => 'Italiano',
+        );
     }
 
     public static function locale() {
         $saved = get_user_meta(get_current_user_id(), 'pwf_language', true);
-        if (is_string($saved) && isset(self::languages()[$saved])) { return $saved; }
+        if (is_string($saved) && $saved !== 'auto' && isset(self::languages()[$saved])) { return $saved; }
         $default = function_exists('get_option') ? get_option('pwf_default_language') : null;
-        if (is_string($default) && isset(self::languages()[$default])) { return $default; }
-        $locale = get_user_locale();
+        if (is_string($default) && $default !== 'auto' && isset(self::languages()[$default])) { return $default; }
+        $locale = function_exists('get_user_locale') ? get_user_locale() : (function_exists('get_locale') ? get_locale() : 'en_US');
         if (strpos($locale, 'fa') === 0) { return 'fa_IR'; }
         if (strpos($locale, 'it') === 0) { return 'it_IT'; }
         return 'en_US';
@@ -26,7 +31,18 @@ class PWF_I18n {
             $path = PWF_DIR . 'languages/' . $locale . '.json';
             self::$catalogs[$locale] = is_readable($path) ? (json_decode(file_get_contents($path), true) ?: array()) : array();
         }
-        return self::$catalogs[$locale][$text] ?? $text;
+        if (isset(self::$catalogs[$locale][$text])) {
+            return self::$catalogs[$locale][$text];
+        }
+        // Native WordPress gettext domain fallback
+        if (function_exists('get_translations_for_domain')) {
+            $translations = get_translations_for_domain('product-workflow');
+            $translation = $translations->translate($text);
+            if (!empty($translation) && $translation !== $text) {
+                return $translation;
+            }
+        }
+        return $text;
     }
 
     public static function attributes() {

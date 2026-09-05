@@ -1,0 +1,902 @@
+# Translation of Product Workflow for WooCommerce into Italian
+# Copyright (C) 2026 Ali Abdollahzadeh
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Product Workflow for WooCommerce 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-workflow\n"
+"POT-Creation-Date: 2026-09-05T21:00:00+00:00\n"
+"PO-Revision-Date: 2026-09-05T21:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: product-workflow\n"
+
+msgid "%s assigned to user #%d (previous: #%d). Due: %s."
+msgstr "%s assegnato all’utente n. %d (precedente: n. %d). Scadenza: %s."
+
+msgid "A review rejection requires a reason."
+msgstr "Per rifiutare la revisione è necessario un motivo."
+
+msgid "Access denied."
+msgstr "Accesso negato."
+
+msgid "Action"
+msgstr "Azione"
+
+msgid "Active"
+msgstr "Attivo"
+
+msgid "Active Tasks"
+msgstr "Attività attive"
+
+msgid "Add New Product"
+msgstr "Aggiungi nuovo prodotto"
+
+msgid "Administrator"
+msgstr "Amministratore"
+
+msgid "All stages"
+msgstr "Tutte le fasi"
+
+msgid "Allow team members to create new products and upload photos directly inside Telegram without accessing the WordPress dashboard."
+msgstr "Consenti ai membri del team di creare nuovi prodotti e caricare foto direttamente su Telegram senza accedere alla bacheca di WordPress."
+
+msgid "Applies when a user has not set a personal language preference."
+msgstr "Si applica quando un utente non ha impostato una preferenza di lingua personale."
+
+msgid "Apply language"
+msgstr "Applica lingua"
+
+msgid "Approval reset"
+msgstr "Approvazione annullata"
+
+msgid "Approved"
+msgstr "Approvato"
+
+msgid "Assign Role & Telegram ID"
+msgstr "Assegna ruolo e ID Telegram"
+
+msgid "Assign an eligible %s user first."
+msgstr "Assegna prima un utente autorizzato per %s."
+
+msgid "Assign user"
+msgstr "Assegna utente"
+
+msgid "Assigned %s"
+msgstr "Assegnato il %s"
+
+msgid "Assigned to"
+msgstr "Assegnato a"
+
+msgid "Assignment could not be saved."
+msgstr "Impossibile salvare l’assegnazione."
+
+msgid "Assignments"
+msgstr "Assegnazioni"
+
+msgid "Attributes (one per line, e.g. Color: Red | Blue)"
+msgstr "Attributi (uno per riga, es. Colore: Rosso | Blu)"
+
+msgid "Automatically follow WordPress site and user language"
+msgstr "Segui automaticamente la lingua del sito e dell'utente di WordPress"
+
+msgid "Available actions"
+msgstr "Azioni disponibili"
+
+msgid "Bot Token"
+msgstr "Token del bot"
+
+msgid "CBM:"
+msgstr "CBM:"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Cancel the current action"
+msgstr "Annulla l'azione corrente"
+
+msgid "Carton quantity:"
+msgstr "Quantità per cartone:"
+
+msgid "Categories"
+msgstr "Categorie"
+
+msgid "Category"
+msgstr "Categoria"
+
+msgid "Chat ID"
+msgstr "ID chat"
+
+msgid "Chat ID is required."
+msgstr "L'ID chat è obbligatorio."
+
+msgid "Check your team members, assign their workflow roles, and configure their personal Telegram Chat IDs for direct task alerts."
+msgstr "Controlla i membri del team, assegna i loro ruoli nel flusso di lavoro e configura i loro ID chat Telegram personali per gli avvisi diretti."
+
+msgid "Choose a valid image file."
+msgstr "Scegli un file immagine valido."
+
+msgid "Choose an eligible user for this stage."
+msgstr "Scegli un utente autorizzato per questa fase."
+
+msgid "Choose an option from the menu:"
+msgstr "Scegli un'opzione dal menu:"
+
+msgid "Choose image attachments belonging to this product."
+msgstr "Scegli immagini allegate appartenenti a questo prodotto."
+
+msgid "Choose the default workflow language for all team members. Individual users can still switch their preferred interface language."
+msgstr "Scegli la lingua predefinita del flusso di lavoro per tutti i membri del team. I singoli utenti possono comunque cambiare la lingua preferita dell'interfaccia."
+
+msgid "Choose user"
+msgstr "Scegli utente"
+
+msgid "Commands:"
+msgstr "Comandi:"
+
+msgid "Complete the following before continuing: %s."
+msgstr "Completa i seguenti campi prima di continuare: %s."
+
+msgid "Completed"
+msgstr "Completato"
+
+msgid "Completed workflows cannot be reassigned."
+msgstr "Non puoi riassegnare un flusso di lavoro completato."
+
+msgid "Configure system languages, Telegram notifications, and team roles."
+msgstr "Configura le lingue di sistema, le notifiche di Telegram e i ruoli del team."
+
+msgid "Connected"
+msgstr "Connesso"
+
+msgid "Content"
+msgstr "Contenuti"
+
+msgid "Content Completed"
+msgstr "Contenuti completati"
+
+msgid "Content Manager"
+msgstr "Responsabile contenuti"
+
+msgid "Content editing is restricted to the assigned content stage."
+msgstr "La modifica dei contenuti è consentita solo nella fase contenuti assegnata."
+
+msgid "Content saved"
+msgstr "Contenuti salvati"
+
+msgid "Could not commit changes."
+msgstr "Impossibile confermare le modifiche."
+
+msgid "Could not complete assignment."
+msgstr "Impossibile completare l’assegnazione."
+
+msgid "Could not reopen assignment."
+msgstr "Impossibile riaprire l’assegnazione."
+
+msgid "Could not reopen review."
+msgstr "Impossibile riaprire la revisione."
+
+msgid "Could not reset review before editing."
+msgstr "Impossibile riaprire la revisione prima della modifica."
+
+msgid "Could not reset review."
+msgstr "Impossibile reimpostare la revisione."
+
+msgid "Could not start a database transaction."
+msgstr "Impossibile avviare una transazione del database."
+
+msgid "Create a draft product. Reference images can be attached after saving."
+msgstr "Crea una bozza prodotto. Puoi allegare immagini di riferimento dopo il salvataggio."
+
+msgid "Create a new product request"
+msgstr "Crea una nuova richiesta di prodotto"
+
+msgid "Create draft product"
+msgstr "Crea bozza prodotto"
+
+msgid "Created by"
+msgstr "Creato da"
+
+msgid "Default Chat / Channel ID"
+msgstr "ID chat / canale predefinito"
+
+msgid "Default System Language"
+msgstr "Lingua di sistema predefinita"
+
+msgid "Delete Webhook"
+msgstr "Elimina webhook"
+
+msgid "Deleted user"
+msgstr "Utente eliminato"
+
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "Draft"
+msgstr "Bozza"
+
+msgid "Draft product entered the workflow."
+msgstr "La bozza prodotto è entrata nel flusso di lavoro."
+
+msgid "Draft products can be enrolled from the workflow dashboard using the product ID."
+msgstr "Puoi inserire le bozze dalla dashboard del flusso di lavoro usando l’ID prodotto."
+
+msgid "Due %s"
+msgstr "Scadenza: %s"
+
+msgid "Due date"
+msgstr "Data di scadenza"
+
+msgid "Due date (optional)"
+msgstr "Data di scadenza (facoltativa)"
+
+msgid "Due date must be a valid YYYY-MM-DD date."
+msgstr "La scadenza deve essere una data valida nel formato YYYY-MM-DD."
+
+msgid "Enable Telegram notifications"
+msgstr "Abilita notifiche Telegram"
+
+msgid "Enable Webhook (Activate Bot Commands)"
+msgstr "Abilita webhook (Attiva comandi bot)"
+
+msgid "Enable automated Telegram alerts for workflow transitions, assignments, and product reviews."
+msgstr "Abilita gli avvisi automatici di Telegram per transizioni di flusso di lavoro, assegnazioni e revisioni del prodotto."
+
+msgid "Enroll an existing draft product"
+msgstr "Inserisci una bozza esistente"
+
+msgid "Enroll draft"
+msgstr "Inserisci bozza"
+
+msgid "Enter a non-negative price."
+msgstr "Inserisci un prezzo non negativo."
+
+msgid "Enter a product name."
+msgstr "Inserisci il nome del prodotto."
+
+msgid "Error"
+msgstr "Errore"
+
+msgid "Event"
+msgstr "Evento"
+
+msgid "Factory"
+msgstr "Fabbrica"
+
+msgid "Factory notes / initial description"
+msgstr "Note della fabbrica / descrizione iniziale"
+
+msgid "Failed to connect to Telegram API."
+msgstr "Impossibile connettersi all'API di Telegram."
+
+msgid "Failed to create product: %s"
+msgstr "Impossibile creare il prodotto: %s"
+
+msgid "Failed to delete Telegram webhook."
+msgstr "Impossibile eliminare il webhook di Telegram."
+
+msgid "Failed to delete webhook: %s"
+msgstr "Impossibile eliminare il webhook: %s"
+
+msgid "Failed to set Telegram webhook."
+msgstr "Impossibile impostare il webhook di Telegram."
+
+msgid "Failed to set webhook: %s"
+msgstr "Impossibile impostare il webhook: %s"
+
+msgid "Filter"
+msgstr "Filtra"
+
+msgid "Finish"
+msgstr "Fine"
+
+msgid "For private users, please enter your numerical Chat ID (e.g. 123456789), not your username or profile link. You must also send /start to your bot first. You can find your Chat ID by messaging @userinfobot on Telegram."
+msgstr "Per gli utenti privati, inserisci il tuo ID chat numerico (es. 123456789), non il nome utente o il link del profilo. Devi anche inviare prima /start al tuo bot. Puoi trovare il tuo ID inviando un messaggio a @userinfobot su Telegram."
+
+msgid "Gallery"
+msgstr "Galleria"
+
+msgid "Global attributes are managed in the WooCommerce editor."
+msgstr "Gli attributi globali si gestiscono nell’editor WooCommerce."
+
+msgid "Group, channel, or manager Telegram Chat ID where global workflow updates will be broadcast."
+msgstr "ID chat Telegram di gruppo, canale o manager in cui verranno trasmesse le notifiche globali del flusso di lavoro."
+
+msgid "Hello %s!"
+msgstr "Ciao %s!"
+
+msgid "Help"
+msgstr "Guida"
+
+msgid "Image attachment #%d uploaded."
+msgstr "Immagine allegata n. %d caricata."
+
+msgid "Image editing is restricted to the assigned photography stage."
+msgstr "La modifica delle immagini è consentita solo nella fase fotografia assegnata."
+
+msgid "Image uploaded"
+msgstr "Immagine caricata"
+
+msgid "Images saved"
+msgstr "Immagini salvate"
+
+msgid "Important: For private users, Telegram requires a numerical Chat ID (e.g. 123456789). Telegram usernames (@username) or profile links (t.me/...) only work for public channels. To find your numerical Chat ID, message @userinfobot on Telegram, or open your bot and send /start."
+msgstr "Importante: per gli utenti privati, Telegram richiede un ID chat numerico (es. 123456789). I nomi utente (@username) o i link (t.me/...) funzionano solo per i canali pubblici. Per trovare il tuo ID numerico, invia un messaggio a @userinfobot su Telegram o apri il tuo bot e invia /start."
+
+msgid "In stock"
+msgstr "Disponibile"
+
+msgid "Inactive / Not registered"
+msgstr "Inattivo / Non registrato"
+
+msgid "Interactive Telegram Bot (Add Products & Manage Workflow from Telegram)"
+msgstr "Bot Telegram interattivo (Aggiungi prodotti e gestisci il flusso da Telegram)"
+
+msgid "Interface language"
+msgstr "Lingua dell’interfaccia"
+
+msgid "Invalid stock status."
+msgstr "Stato del magazzino non valido."
+
+msgid "Languages"
+msgstr "Lingue"
+
+msgid "Last webhook error: %s"
+msgstr "Ultimo errore webhook: %s"
+
+msgid "Main image"
+msgstr "Immagine principale"
+
+msgid "Main image and gallery updated."
+msgstr "Immagine principale e galleria aggiornate."
+
+msgid "Move to %s"
+msgstr "Passa a %s"
+
+msgid "My Tasks"
+msgstr "Le mie attività"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Native WooCommerce edit requested; approval reset before saving."
+msgstr "Richiesta una modifica in WooCommerce; approvazione annullata prima del salvataggio."
+
+msgid "Native unpublication or trash requested; social handoff withdrawn."
+msgstr "Richiesto il ritiro della pubblicazione o lo spostamento nel cestino; consegna al team social revocata."
+
+msgid "New Product"
+msgstr "Nuovo prodotto"
+
+msgid "New product workflow created"
+msgstr "Nuovo flusso di lavoro del prodotto creato"
+
+msgid "Newer history"
+msgstr "Eventi più recenti"
+
+msgid "Next"
+msgstr "Successiva"
+
+msgid "No SKU"
+msgstr "SKU non impostato"
+
+msgid "No actions available for you at this stage."
+msgstr "Non hai azioni disponibili in questa fase."
+
+msgid "No images uploaded yet."
+msgstr "Nessuna immagine caricata."
+
+msgid "No products match these filters."
+msgstr "Nessun prodotto corrisponde ai filtri."
+
+msgid "None"
+msgstr "Nessuna"
+
+msgid "Not set"
+msgstr "Non impostato"
+
+msgid "Note"
+msgstr "Nota"
+
+msgid "Note (optional)"
+msgstr "Nota (facoltativa)"
+
+msgid "Notification Events"
+msgstr "Eventi di notifica"
+
+msgid "Now please send reference photos for this product."
+msgstr "Ora invia le foto di riferimento per questo prodotto."
+
+msgid "Obtained from @BotFather on Telegram (e.g., 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ)."
+msgstr "Ottenuto da @BotFather su Telegram (es. 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ)."
+
+msgid "Older history"
+msgstr "Eventi precedenti"
+
+msgid "On backorder"
+msgstr "Ordinabile su richiesta"
+
+msgid "Only draft products can enter the workflow."
+msgstr "Solo i prodotti in bozza possono entrare nel flusso di lavoro."
+
+msgid "Only images are accepted."
+msgstr "Sono accettate solo immagini."
+
+msgid "Open task"
+msgstr "Apri attività"
+
+msgid "Open workflow actions"
+msgstr "Apri azioni del flusso di lavoro"
+
+msgid "Open workflow dashboard"
+msgstr "Apri dashboard del flusso di lavoro"
+
+msgid "Operation cancelled."
+msgstr "Operazione annullata."
+
+msgid "Out of stock"
+msgstr "Esaurito"
+
+msgid "Pending"
+msgstr "In attesa"
+
+msgid "Personal Telegram Chat ID"
+msgstr "ID chat Telegram personale"
+
+msgid "Photo attached successfully! Send more photos or click /done to finish."
+msgstr "Foto allegata con successo! Invia altre foto o fai clic su /done per terminare."
+
+msgid "Photographer"
+msgstr "Fotografo"
+
+msgid "Photography"
+msgstr "Fotografia"
+
+msgid "Photography Completed"
+msgstr "Fotografia completata"
+
+msgid "Please enter factory notes or initial description (or send /skip):"
+msgstr "Inserisci le note della fabbrica o la descrizione iniziale (o invia /skip):"
+
+msgid "Please enter the Product Name:"
+msgstr "Inserisci il nome del prodotto:"
+
+msgid "Please enter the SKU code (or send /skip if none):"
+msgstr "Inserisci il codice SKU (o invia /skip se assente):"
+
+msgid "Please send photos, or click /done to finish."
+msgstr "Invia le foto o fai clic su /done per terminare."
+
+msgid "Please specify a Chat ID to test."
+msgstr "Specifica un ID chat da testare."
+
+msgid "Previous"
+msgstr "Precedente"
+
+msgid "Price:"
+msgstr "Prezzo:"
+
+msgid "Private"
+msgstr "Privato"
+
+msgid "Product #%d"
+msgstr "Prodotto #%d"
+
+msgid "Product #%d is now enrolled in the workflow queue and ready for photography assignment."
+msgstr "Il prodotto #%d è ora registrato nella coda del flusso ed è pronto per l'assegnazione fotografica."
+
+msgid "Product / SKU"
+msgstr "Prodotto / SKU"
+
+msgid "Product Details"
+msgstr "Dettagli prodotto"
+
+msgid "Product Reviewer"
+msgstr "Revisore prodotti"
+
+msgid "Product Workflow"
+msgstr "Flusso di lavoro prodotti"
+
+msgid "Product Workflow requires WooCommerce to be active."
+msgstr "Il flusso di lavoro prodotti richiede WooCommerce attivo."
+
+msgid "Product content updated"
+msgstr "Contenuto del prodotto aggiornato"
+
+msgid "Product content updated."
+msgstr "Contenuti del prodotto aggiornati."
+
+msgid "Product created successfully!"
+msgstr "Prodotto creato con successo!"
+
+msgid "Product edited outside workflow form."
+msgstr "Prodotto modificato al di fuori del modulo del flusso di lavoro."
+
+msgid "Product edited outside workflow form. Approval reset; review again."
+msgstr "Prodotto modificato al di fuori del modulo del flusso di lavoro. Approvazione annullata; ripetere la revisione."
+
+msgid "Product images and reference material"
+msgstr "Immagini prodotto e materiale di riferimento"
+
+msgid "Product images updated"
+msgstr "Immagini del prodotto aggiornate"
+
+msgid "Product information"
+msgstr "Informazioni sul prodotto"
+
+msgid "Product name"
+msgstr "Nome prodotto"
+
+msgid "Product name cannot be empty."
+msgstr "Il nome del prodotto non può essere vuoto."
+
+msgid "Product name cannot be empty. Please enter the name:"
+msgstr "Il nome del prodotto non può essere vuoto. Inserisci il nome:"
+
+msgid "Product name:"
+msgstr "Nome del prodotto:"
+
+msgid "Product not found."
+msgstr "Prodotto non trovato."
+
+msgid "Product or SKU"
+msgstr "Prodotto o SKU"
+
+msgid "Product setup completed!"
+msgstr "Configurazione del prodotto completata!"
+
+msgid "Products: %d"
+msgstr "Prodotti: %d"
+
+msgid "Publication withdrawn"
+msgstr "Pubblicazione ritirata"
+
+msgid "Publish WooCommerce product"
+msgstr "Pubblica prodotto WooCommerce"
+
+msgid "Publish through the workflow after approval. Editing an approved product resets its review."
+msgstr "Pubblica dal flusso di lavoro dopo l’approvazione. La modifica di un prodotto approvato riapre la revisione."
+
+msgid "Published"
+msgstr "Pubblicato"
+
+msgid "Ready for Social"
+msgstr "Pronto per il team social"
+
+msgid "Recent chats detected from bot"
+msgstr "Chat recenti rilevate dal bot"
+
+msgid "Regular price"
+msgstr "Prezzo di listino"
+
+msgid "Rejection reason (required)"
+msgstr "Motivo del rifiuto (obbligatorio)"
+
+msgid "Remove Workflow Role"
+msgstr "Rimuovi ruolo del flusso di lavoro"
+
+msgid "Review"
+msgstr "Revisione"
+
+msgid "SEO description"
+msgstr "Descrizione SEO"
+
+msgid "SEO fields are preparation notes stored with this product. Connect your SEO plugin to use them on the storefront."
+msgstr "I campi SEO sono note preparatorie salvate con il prodotto. Collega il tuo plugin SEO per utilizzarli nel negozio."
+
+msgid "SEO title"
+msgstr "Titolo SEO"
+
+msgid "SKU"
+msgstr "SKU"
+
+msgid "SKU:"
+msgstr "SKU:"
+
+msgid "SKU: %s · WooCommerce: %s"
+msgstr "SKU: %s · WooCommerce: %s"
+
+msgid "Save %s assignment"
+msgstr "Salva assegnazione: %s"
+
+msgid "Save Settings"
+msgstr "Salva impostazioni"
+
+msgid "Save content"
+msgstr "Salva contenuti"
+
+msgid "Save image selection"
+msgstr "Salva selezione immagini"
+
+msgid "Saved successfully."
+msgstr "Salvataggio completato."
+
+msgid "Scheduled"
+msgstr "Programmato"
+
+msgid "Select User"
+msgstr "Seleziona utente"
+
+msgid "Send Test Message"
+msgstr "Invia messaggio di prova"
+
+msgid "Send an immediate test alert to verify your Bot Token and Chat ID."
+msgstr "Invia un avviso di prova immediato per verificare il token del bot e l'ID chat."
+
+msgid "Send images one by one or as an album. Click /done when finished."
+msgstr "Invia le immagini una alla volta o come album. Fai clic su /done al termine."
+
+msgid "Settings"
+msgstr "Impostazioni"
+
+msgid "Settings saved successfully."
+msgstr "Impostazioni salvate con successo."
+
+msgid "Shop Manager"
+msgstr "Gestore del negozio"
+
+msgid "Short description"
+msgstr "Descrizione breve"
+
+msgid "Social"
+msgstr "Social"
+
+msgid "Social Media"
+msgstr "Social media"
+
+msgid "Stage"
+msgstr "Fase"
+
+msgid "Stage changed"
+msgstr "Fase modificata"
+
+msgid "Stock status"
+msgstr "Stato del magazzino"
+
+msgid "Supported Catalogs"
+msgstr "Cataloghi supportati"
+
+msgid "System / deleted user"
+msgstr "Sistema / utente eliminato"
+
+msgid "Tags"
+msgstr "Tag"
+
+msgid "Target Chat ID"
+msgstr "ID chat di destinazione"
+
+msgid "Task assigned"
+msgstr "Attività assegnata"
+
+msgid "Task assigned to a team member"
+msgstr "Attività assegnata a un membro del team"
+
+msgid "Task notifications for this user will be delivered to this Telegram Chat ID."
+msgstr "Le notifiche delle attività per questo utente verranno inviate a questo ID chat Telegram."
+
+msgid "Team & Role Management"
+msgstr "Gestione team e ruoli"
+
+msgid "Team & Roles"
+msgstr "Team e ruoli"
+
+msgid "Team Members"
+msgstr "Membri del team"
+
+msgid "Telegram API"
+msgstr "API di Telegram"
+
+msgid "Telegram Bot API"
+msgstr "API bot di Telegram"
+
+msgid "Telegram Chat ID"
+msgstr "ID chat Telegram"
+
+msgid "Telegram Notifications"
+msgstr "Notifiche Telegram"
+
+msgid "Telegram bot token is not configured."
+msgstr "Il token del bot Telegram non è configurato."
+
+msgid "Telegram message could not be sent."
+msgstr "Impossibile inviare il messaggio Telegram."
+
+msgid "Telegram sends user messages and photos to this secure HTTPS REST API endpoint."
+msgstr "Telegram invia i messaggi e le foto degli utenti a questo endpoint REST API HTTPS sicuro."
+
+msgid "Telegram test failed: %s"
+msgstr "Test di Telegram non riuscito: %s"
+
+msgid "Telegram webhook removed."
+msgstr "Webhook di Telegram rimosso."
+
+msgid "Telegram webhook set successfully."
+msgstr "Webhook di Telegram impostato con successo."
+
+msgid "Test Telegram Connection"
+msgstr "Verifica connessione Telegram"
+
+msgid "Test message sent successfully via Telegram."
+msgstr "Messaggio di prova inviato con successo tramite Telegram."
+
+msgid "The audit record could not be saved. Please retry."
+msgstr "Impossibile salvare il registro delle operazioni. Riprova."
+
+msgid "The product must be published before social handoff."
+msgstr "Il prodotto deve essere pubblicato prima della consegna al team social."
+
+msgid "The workflow changed. Refresh before trying again."
+msgstr "Il flusso di lavoro è cambiato. Aggiorna la pagina prima di riprovare."
+
+msgid "The workflow editor supports simple products. Use the WooCommerce editor for other product types."
+msgstr "L’editor del flusso di lavoro supporta i prodotti semplici. Per altri tipi usa l’editor WooCommerce."
+
+msgid "This product is being updated. Please retry."
+msgstr "Il prodotto è in aggiornamento. Riprova."
+
+msgid "Time / person"
+msgstr "Data e ora / persona"
+
+msgid "Times are shown in the site timezone."
+msgstr "Gli orari sono visualizzati nel fuso orario del sito."
+
+msgid "Track each product from factory introduction to social handoff."
+msgstr "Segui ogni prodotto dalla presentazione in fabbrica alla consegna al team social."
+
+msgid "Trash"
+msgstr "Cestino"
+
+msgid "Type /cancel to abort at any time"
+msgstr "Digita /cancel in qualsiasi momento per interrompere"
+
+msgid "Unassigned"
+msgstr "Non assegnato"
+
+msgid "Unknown action."
+msgstr "Azione sconosciuta."
+
+msgid "Unknown category or tag."
+msgstr "Categoria o tag sconosciuto."
+
+msgid "Unknown workflow stage."
+msgstr "Fase del flusso di lavoro sconosciuta."
+
+msgid "Unsupported language."
+msgstr "Lingua non supportata."
+
+msgid "Update Role & Telegram"
+msgstr "Aggiorna ruolo e Telegram"
+
+msgid "Updated by"
+msgstr "Aggiornato da"
+
+msgid "Upload JPEG, PNG or WebP"
+msgstr "Carica JPEG, PNG o WebP"
+
+msgid "Upload and select a main product image first."
+msgstr "Carica e seleziona prima un’immagine principale del prodotto."
+
+msgid "Upload image"
+msgstr "Carica immagine"
+
+msgid "User"
+msgstr "Utente"
+
+msgid "User not found."
+msgstr "Utente non trovato."
+
+msgid "User role and Telegram settings updated successfully."
+msgstr "Ruolo utente e impostazioni Telegram aggiornati con successo."
+
+msgid "View assigned product"
+msgstr "Visualizza prodotto assegnato"
+
+msgid "View published product"
+msgstr "Visualizza prodotto pubblicato"
+
+msgid "View your active assigned tasks"
+msgstr "Visualizza le tue attività assegnate attive"
+
+msgid "Waiting for Content"
+msgstr "In attesa dei contenuti"
+
+msgid "Waiting for Photography"
+msgstr "In attesa di fotografia"
+
+msgid "Waiting for Review"
+msgstr "In attesa di revisione"
+
+msgid "Webhook Status"
+msgstr "Stato del webhook"
+
+msgid "Webhook URL"
+msgstr "URL del webhook"
+
+msgid "Welcome to Product Workflow!"
+msgstr "Benvenuto in Flusso di lavoro del prodotto!"
+
+msgid "WooCommerce draft product ID"
+msgstr "ID della bozza prodotto WooCommerce"
+
+msgid "WooCommerce edit"
+msgstr "Modifica WooCommerce"
+
+msgid "WooCommerce publication failed."
+msgstr "Pubblicazione WooCommerce non riuscita."
+
+msgid "WordPress Default"
+msgstr "Predefinito di WordPress"
+
+msgid "Workflow Role"
+msgstr "Ruolo nel flusso di lavoro"
+
+msgid "Workflow Settings"
+msgstr "Impostazioni del flusso di lavoro"
+
+msgid "Workflow changed; please retry."
+msgstr "Il flusso di lavoro è cambiato; riprova."
+
+msgid "Workflow changed; refresh the product before editing."
+msgstr "Il flusso di lavoro è cambiato; aggiorna il prodotto prima di modificarlo."
+
+msgid "Workflow could not be initialized."
+msgstr "Impossibile inizializzare il flusso di lavoro."
+
+msgid "Workflow created"
+msgstr "Flusso di lavoro creato"
+
+msgid "Workflow history"
+msgstr "Cronologia del flusso di lavoro"
+
+msgid "Workflow product not found."
+msgstr "Prodotto del flusso di lavoro non trovato."
+
+msgid "Workflow stage / status changed"
+msgstr "Stato / fase del flusso di lavoro modificato"
+
+msgid "You can add new products and manage your workflow tasks directly from Telegram."
+msgstr "Puoi aggiungere nuovi prodotti e gestire le tue attività del flusso direttamente da Telegram."
+
+msgid "You cannot access this workflow."
+msgstr "Non puoi accedere a questo flusso di lavoro."
+
+msgid "You cannot assign tasks."
+msgstr "Non puoi assegnare attività."
+
+msgid "You cannot create products."
+msgstr "Non puoi creare prodotti."
+
+msgid "You cannot enroll this product."
+msgstr "Non puoi inserire questo prodotto nel flusso di lavoro."
+
+msgid "You cannot perform this transition."
+msgstr "Non puoi eseguire questo cambio di fase."
+
+msgid "You cannot upload to this product at this stage."
+msgstr "Non puoi caricare file per questo prodotto in questa fase."
+
+msgid "You do not have access to this product."
+msgstr "Non hai accesso a questo prodotto."
+
+msgid "You do not have permission to create products."
+msgstr "Non hai i permessi per creare prodotti."
+
+msgid "You have no active pending tasks right now."
+msgstr "Al momento non hai attività in sospeso attive."
+
+msgid "Your Active Tasks:"
+msgstr "Le tue attività attive:"
+
+msgid "Your Telegram ID is:"
+msgstr "Il tuo ID Telegram è:"
+
+msgid "Your account is not linked to any WordPress user yet. Please ask your store administrator to set your Telegram Chat ID in Workflow Settings."
+msgstr "Il tuo account non è ancora collegato a nessun utente di WordPress. Chiedi all'amministratore del negozio di impostare il tuo ID chat Telegram nelle impostazioni del flusso."
+
+msgid "Your assigned work that is ready for action, plus new product requests you created."
+msgstr "Le attività assegnate pronte da svolgere e le nuove richieste prodotto che hai creato."
+
+msgid "e.g. 123456789"
+msgstr "es. 123456789"
+

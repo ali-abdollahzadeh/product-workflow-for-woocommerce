@@ -292,5 +292,7 @@
     "Your Telegram ID is:": "شناسه تلگرام شما:",
     "Your account is not linked to any WordPress user yet. Please ask your store administrator to set your Telegram Chat ID in Workflow Settings.": "حساب کاربری شما هنوز به هیچ کاربری در وردپرس متصل نشده است. لطفاً از مدیر فروشگاه بخواهید شناسه تلگرام شما را در تنظیمات فرآیند ثبت کند.",
     "Carton quantity:": "تعداد در کارتن:",
-    "CBM:": "حجم کارتن (CBM):"
+    "CBM:": "حجم کارتن (CBM):",
+    "WordPress Default": "پیش‌فرض وردپرس",
+    "Automatically follow WordPress site and user language": "هماهنگی خودکار با زبان سایت و پروفایل کاربر در وردپرس"
 }

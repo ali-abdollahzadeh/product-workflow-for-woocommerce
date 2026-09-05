@@ -1,0 +1,902 @@
+# Translation of Product Workflow for WooCommerce into Persian
+# Copyright (C) 2026 Ali Abdollahzadeh
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Product Workflow for WooCommerce 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/product-workflow\n"
+"POT-Creation-Date: 2026-09-05T21:00:00+00:00\n"
+"PO-Revision-Date: 2026-09-05T21:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: product-workflow\n"
+
+msgid "%s assigned to user #%d (previous: #%d). Due: %s."
+msgstr "وظیفه %s به کاربر شماره %d تخصیص یافت (مسئول قبلی: شماره %d). مهلت: %s."
+
+msgid "A review rejection requires a reason."
+msgstr "برای رد بررسی باید دلیل وارد کنید."
+
+msgid "Access denied."
+msgstr "دسترسی مجاز نیست."
+
+msgid "Action"
+msgstr "عملیات"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Active Tasks"
+msgstr "کارهای فعال"
+
+msgid "Add New Product"
+msgstr "افزودن محصول جدید"
+
+msgid "Administrator"
+msgstr "مدیر کل"
+
+msgid "All stages"
+msgstr "همه مراحل"
+
+msgid "Allow team members to create new products and upload photos directly inside Telegram without accessing the WordPress dashboard."
+msgstr "به اعضای تیم اجازه دهید بدون ورود به پیشخوان وردپرس، مستقیماً در تلگرام محصولات جدید ایجاد کرده و عکس‌ها را آپلود کنند."
+
+msgid "Applies when a user has not set a personal language preference."
+msgstr "زمانی اعمال می‌شود که کاربر زبان ترجیحی شخصی تعیین نکرده باشد."
+
+msgid "Apply language"
+msgstr "اعمال زبان"
+
+msgid "Approval reset"
+msgstr "تأیید لغو شد"
+
+msgid "Approved"
+msgstr "تأییدشده"
+
+msgid "Assign Role & Telegram ID"
+msgstr "تخصیص نقش و شناسه تلگرام"
+
+msgid "Assign an eligible %s user first."
+msgstr "ابتدا یک کاربر با مجوز مناسب برای %s تعیین کنید."
+
+msgid "Assign user"
+msgstr "انتخاب مسئول"
+
+msgid "Assigned %s"
+msgstr "تخصیص در %s"
+
+msgid "Assigned to"
+msgstr "واگذار شده به"
+
+msgid "Assignment could not be saved."
+msgstr "تخصیص وظیفه ذخیره نشد."
+
+msgid "Assignments"
+msgstr "تخصیص وظایف"
+
+msgid "Attributes (one per line, e.g. Color: Red | Blue)"
+msgstr "ویژگی‌ها (هر ویژگی در یک خط، مانند Color: Red | Blue)"
+
+msgid "Automatically follow WordPress site and user language"
+msgstr "هماهنگی خودکار با زبان سایت و پروفایل کاربر در وردپرس"
+
+msgid "Available actions"
+msgstr "عملیات مجاز"
+
+msgid "Bot Token"
+msgstr "توکن ربات"
+
+msgid "CBM:"
+msgstr "حجم کارتن (CBM):"
+
+msgid "Cancel"
+msgstr "انصراف"
+
+msgid "Cancel the current action"
+msgstr "انصراف از عملیات فعلی"
+
+msgid "Carton quantity:"
+msgstr "تعداد در کارتن:"
+
+msgid "Categories"
+msgstr "دسته‌بندی‌ها"
+
+msgid "Category"
+msgstr "دسته‌بندی"
+
+msgid "Chat ID"
+msgstr "شناسه گفتگو"
+
+msgid "Chat ID is required."
+msgstr "شناسه گفتگو الزامی است."
+
+msgid "Check your team members, assign their workflow roles, and configure their personal Telegram Chat IDs for direct task alerts."
+msgstr "اعضای تیم خود را بررسی کنید، نقش‌های فرآیند آن‌ها را تعیین کنید و شناسه گفتگوی تلگرام شخصی آن‌ها را برای هشدارهای مستقیم کار تنظیم نمایید."
+
+msgid "Choose a valid image file."
+msgstr "یک فایل تصویر معتبر انتخاب کنید."
+
+msgid "Choose an eligible user for this stage."
+msgstr "کاربری با مجوز مناسب برای این مرحله انتخاب کنید."
+
+msgid "Choose an option from the menu:"
+msgstr "یک گزینه را از منو انتخاب کنید:"
+
+msgid "Choose image attachments belonging to this product."
+msgstr "تصاویر پیوست متعلق به همین محصول را انتخاب کنید."
+
+msgid "Choose the default workflow language for all team members. Individual users can still switch their preferred interface language."
+msgstr "زبان پیش‌فرض فرآیند را برای همه اعضای تیم انتخاب کنید. کاربران همچنان می‌توانند زبان رابط کاربری ترجیحی خود را تغییر دهند."
+
+msgid "Choose user"
+msgstr "انتخاب کاربر"
+
+msgid "Commands:"
+msgstr "دستورات:"
+
+msgid "Complete the following before continuing: %s."
+msgstr "پیش از ادامه، موارد زیر را تکمیل کنید: %s."
+
+msgid "Completed"
+msgstr "تکمیل‌شده"
+
+msgid "Completed workflows cannot be reassigned."
+msgstr "وظایف گردش کار تکمیل‌شده قابل تخصیص مجدد نیستند."
+
+msgid "Configure system languages, Telegram notifications, and team roles."
+msgstr "پیکربندی زبان‌های سیستم، اعلان‌های تلگرام و نقش‌های تیم."
+
+msgid "Connected"
+msgstr "متصل شد"
+
+msgid "Content"
+msgstr "محتوا"
+
+msgid "Content Completed"
+msgstr "محتوا تکمیل شد"
+
+msgid "Content Manager"
+msgstr "مدیر محتوا"
+
+msgid "Content editing is restricted to the assigned content stage."
+msgstr "ویرایش محتوا فقط برای مسئول تعیین‌شده در مرحله محتوا مجاز است."
+
+msgid "Content saved"
+msgstr "محتوا ذخیره شد"
+
+msgid "Could not commit changes."
+msgstr "ثبت نهایی تغییرات ممکن نشد."
+
+msgid "Could not complete assignment."
+msgstr "تکمیل وظیفه ممکن نشد."
+
+msgid "Could not reopen assignment."
+msgstr "بازگشایی وظیفه ممکن نشد."
+
+msgid "Could not reopen review."
+msgstr "بازگشایی بررسی ممکن نشد."
+
+msgid "Could not reset review before editing."
+msgstr "بازنشانی بررسی پیش از ویرایش ممکن نشد."
+
+msgid "Could not reset review."
+msgstr "بازنشانی بررسی ممکن نشد."
+
+msgid "Could not start a database transaction."
+msgstr "شروع تراکنش پایگاه داده ممکن نشد."
+
+msgid "Create a draft product. Reference images can be attached after saving."
+msgstr "یک محصول پیش‌نویس بسازید. پس از ذخیره، می‌توانید تصاویر مرجع را پیوست کنید."
+
+msgid "Create a new product request"
+msgstr "ایجاد درخواست محصول جدید"
+
+msgid "Create draft product"
+msgstr "ایجاد محصول پیش‌نویس"
+
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+msgid "Default Chat / Channel ID"
+msgstr "شناسه پیش‌فرض گفتگو / کانال"
+
+msgid "Default System Language"
+msgstr "زبان پیش‌فرض سیستم"
+
+msgid "Delete Webhook"
+msgstr "حذف وبهوک"
+
+msgid "Deleted user"
+msgstr "کاربر حذف‌شده"
+
+msgid "Description"
+msgstr "توضیحات"
+
+msgid "Draft"
+msgstr "پیش‌نویس"
+
+msgid "Draft product entered the workflow."
+msgstr "محصول پیش‌نویس وارد گردش کار شد."
+
+msgid "Draft products can be enrolled from the workflow dashboard using the product ID."
+msgstr "محصولات پیش‌نویس را می‌توان با شناسه محصول از داشبورد به گردش کار افزود."
+
+msgid "Due %s"
+msgstr "مهلت: %s"
+
+msgid "Due date"
+msgstr "مهلت انجام"
+
+msgid "Due date (optional)"
+msgstr "مهلت انجام (اختیاری)"
+
+msgid "Due date must be a valid YYYY-MM-DD date."
+msgstr "مهلت باید یک تاریخ معتبر با قالب YYYY-MM-DD باشد."
+
+msgid "Enable Telegram notifications"
+msgstr "فعال‌سازی اعلان‌های تلگرام"
+
+msgid "Enable Webhook (Activate Bot Commands)"
+msgstr "فعال‌سازی وبهوک (فعال‌سازی دستورات ربات)"
+
+msgid "Enable automated Telegram alerts for workflow transitions, assignments, and product reviews."
+msgstr "فعال‌سازی هشدارهای خودکار تلگرام برای تغییرات مراحل فرآیند، واگذاری‌ها و بررسی محصولات."
+
+msgid "Enroll an existing draft product"
+msgstr "افزودن پیش‌نویس موجود به گردش کار"
+
+msgid "Enroll draft"
+msgstr "افزودن پیش‌نویس"
+
+msgid "Enter a non-negative price."
+msgstr "قیمتی برابر یا بزرگ‌تر از صفر وارد کنید."
+
+msgid "Enter a product name."
+msgstr "نام محصول را وارد کنید."
+
+msgid "Error"
+msgstr "خطا"
+
+msgid "Event"
+msgstr "رویداد"
+
+msgid "Factory"
+msgstr "کارخانه"
+
+msgid "Factory notes / initial description"
+msgstr "یادداشت کارخانه / توضیحات اولیه"
+
+msgid "Failed to connect to Telegram API."
+msgstr "اتصال به رابط تلگرام ناموفق بود."
+
+msgid "Failed to create product: %s"
+msgstr "ایجاد محصول ناموفق بود: %s"
+
+msgid "Failed to delete Telegram webhook."
+msgstr "حذف وبهوک تلگرام ناموفق بود."
+
+msgid "Failed to delete webhook: %s"
+msgstr "حذف وبهوک ناموفق بود: %s"
+
+msgid "Failed to set Telegram webhook."
+msgstr "تنظیم وبهوک تلگرام ناموفق بود."
+
+msgid "Failed to set webhook: %s"
+msgstr "تنظیم وبهوک ناموفق بود: %s"
+
+msgid "Filter"
+msgstr "فیلتر"
+
+msgid "Finish"
+msgstr "پایان"
+
+msgid "For private users, please enter your numerical Chat ID (e.g. 123456789), not your username or profile link. You must also send /start to your bot first. You can find your Chat ID by messaging @userinfobot on Telegram."
+msgstr "برای کاربران شخصی، لطفاً شناسه عددی چت (مانند 123456789) را وارد کنید، نه نام کاربری یا لینک پروفایل را. همچنین باید ابتدا به ربات خود پیام /start بفرستید. می‌توانید شناسه عددی خود را با ارسال پیام به @userinfobot در تلگرام بیابید."
+
+msgid "Gallery"
+msgstr "گالری"
+
+msgid "Global attributes are managed in the WooCommerce editor."
+msgstr "ویژگی‌های سراسری در ویرایشگر ووکامرس مدیریت می‌شوند."
+
+msgid "Group, channel, or manager Telegram Chat ID where global workflow updates will be broadcast."
+msgstr "شناسه گروه، کانال یا مدیر در تلگرام که به‌روزرسانی‌های عمومی فرآیند در آن منتشر می‌شود."
+
+msgid "Hello %s!"
+msgstr "سلام %s!"
+
+msgid "Help"
+msgstr "راهنما"
+
+msgid "Image attachment #%d uploaded."
+msgstr "تصویر پیوست شماره %d بارگذاری شد."
+
+msgid "Image editing is restricted to the assigned photography stage."
+msgstr "ویرایش تصاویر فقط برای مسئول تعیین‌شده در مرحله عکاسی مجاز است."
+
+msgid "Image uploaded"
+msgstr "تصویر بارگذاری شد"
+
+msgid "Images saved"
+msgstr "تصاویر ذخیره شدند"
+
+msgid "Important: For private users, Telegram requires a numerical Chat ID (e.g. 123456789). Telegram usernames (@username) or profile links (t.me/...) only work for public channels. To find your numerical Chat ID, message @userinfobot on Telegram, or open your bot and send /start."
+msgstr "مهم: برای کاربران شخصی، تلگرام به شناسه عددی چت (مانند 123456789) نیاز دارد. نام‌های کاربری (@username) یا لینک‌ها (t.me/...) فقط برای کانال‌های عمومی کار می‌کنند. برای یافتن شناسه عددی خود، به @userinfobot در تلگرام پیام دهید یا ربات خود را باز کرده و /start ارسال کنید."
+
+msgid "In stock"
+msgstr "موجود"
+
+msgid "Inactive / Not registered"
+msgstr "غیرفعال / ثبت‌نشده"
+
+msgid "Interactive Telegram Bot (Add Products & Manage Workflow from Telegram)"
+msgstr "ربات تعاملی تلگرام (ثبت محصول و مدیریت فرآیند از تلگرام)"
+
+msgid "Interface language"
+msgstr "زبان رابط کاربری"
+
+msgid "Invalid stock status."
+msgstr "وضعیت موجودی نامعتبر است."
+
+msgid "Languages"
+msgstr "زبان‌ها"
+
+msgid "Last webhook error: %s"
+msgstr "آخرین خطای وبهوک: %s"
+
+msgid "Main image"
+msgstr "تصویر اصلی"
+
+msgid "Main image and gallery updated."
+msgstr "تصویر اصلی و گالری به‌روزرسانی شدند."
+
+msgid "Move to %s"
+msgstr "انتقال به %s"
+
+msgid "My Tasks"
+msgstr "وظایف من"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Native WooCommerce edit requested; approval reset before saving."
+msgstr "درخواست ویرایش در ووکامرس ثبت شد؛ تأیید پیش از ذخیره لغو شد."
+
+msgid "Native unpublication or trash requested; social handoff withdrawn."
+msgstr "درخواست لغو انتشار یا انتقال به زباله‌دان ثبت شد؛ تحویل به تیم شبکه‌های اجتماعی لغو شد."
+
+msgid "New Product"
+msgstr "محصول جدید"
+
+msgid "New product workflow created"
+msgstr "فرآیند جدید محصول ایجاد شد"
+
+msgid "Newer history"
+msgstr "رویدادهای جدیدتر"
+
+msgid "Next"
+msgstr "بعدی"
+
+msgid "No SKU"
+msgstr "بدون کد کالا"
+
+msgid "No actions available for you at this stage."
+msgstr "در این مرحله عملیاتی برای شما در دسترس نیست."
+
+msgid "No images uploaded yet."
+msgstr "هنوز تصویری بارگذاری نشده است."
+
+msgid "No products match these filters."
+msgstr "محصولی با این فیلترها پیدا نشد."
+
+msgid "None"
+msgstr "ندارد"
+
+msgid "Not set"
+msgstr "تنظیم نشده"
+
+msgid "Note"
+msgstr "یادداشت"
+
+msgid "Note (optional)"
+msgstr "یادداشت (اختیاری)"
+
+msgid "Notification Events"
+msgstr "رویدادهای اعلان"
+
+msgid "Now please send reference photos for this product."
+msgstr "اکنون لطفاً عکس‌های نمونه/مرجع این محصول را ارسال کنید."
+
+msgid "Obtained from @BotFather on Telegram (e.g., 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ)."
+msgstr "دریافت شده از @BotFather در تلگرام (به عنوان مثال 123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ)."
+
+msgid "Older history"
+msgstr "رویدادهای قدیمی‌تر"
+
+msgid "On backorder"
+msgstr "قابل پیش‌سفارش"
+
+msgid "Only draft products can enter the workflow."
+msgstr "فقط محصولات پیش‌نویس می‌توانند وارد گردش کار شوند."
+
+msgid "Only images are accepted."
+msgstr "فقط فایل‌های تصویری پذیرفته می‌شوند."
+
+msgid "Open task"
+msgstr "مشاهده وظیفه"
+
+msgid "Open workflow actions"
+msgstr "مشاهده عملیات گردش کار"
+
+msgid "Open workflow dashboard"
+msgstr "مشاهده داشبورد گردش کار"
+
+msgid "Operation cancelled."
+msgstr "عملیات لغو شد."
+
+msgid "Out of stock"
+msgstr "ناموجود"
+
+msgid "Pending"
+msgstr "در انتظار تأیید"
+
+msgid "Personal Telegram Chat ID"
+msgstr "شناسه گفتگوی شخصی تلگرام"
+
+msgid "Photo attached successfully! Send more photos or click /done to finish."
+msgstr "عکس با موفقیت ضمیمه شد! عکس‌های بیشتری بفرستید یا روی /done بزنید."
+
+msgid "Photographer"
+msgstr "عکاس"
+
+msgid "Photography"
+msgstr "عکاسی"
+
+msgid "Photography Completed"
+msgstr "عکاسی تکمیل شد"
+
+msgid "Please enter factory notes or initial description (or send /skip):"
+msgstr "لطفاً یادداشت‌های کارخانه یا توضیحات اولیه را وارد کنید (یا /skip را ارسال نمایید):"
+
+msgid "Please enter the Product Name:"
+msgstr "لطفاً نام محصول را وارد کنید:"
+
+msgid "Please enter the SKU code (or send /skip if none):"
+msgstr "لطفاً کد شناسه SKU را وارد کنید (یا در صورت عدم وجود /skip را ارسال نمایید):"
+
+msgid "Please send photos, or click /done to finish."
+msgstr "لطفاً عکس‌ها را ارسال کنید، یا برای پایان روی /done بزنید."
+
+msgid "Please specify a Chat ID to test."
+msgstr "لطفاً یک شناسه گفتگو برای آزمایش مشخص کنید."
+
+msgid "Previous"
+msgstr "قبلی"
+
+msgid "Price:"
+msgstr "قیمت:"
+
+msgid "Private"
+msgstr "خصوصی"
+
+msgid "Product #%d"
+msgstr "محصول #%d"
+
+msgid "Product #%d is now enrolled in the workflow queue and ready for photography assignment."
+msgstr "محصول #%d اکنون در صف فرآیند ثبت شد و آماده واگذاری به عکاس است."
+
+msgid "Product / SKU"
+msgstr "محصول / کد کالا"
+
+msgid "Product Details"
+msgstr "جزئیات محصول"
+
+msgid "Product Reviewer"
+msgstr "بررسی‌کننده محصول"
+
+msgid "Product Workflow"
+msgstr "گردش کار محصول"
+
+msgid "Product Workflow requires WooCommerce to be active."
+msgstr "برای استفاده از گردش کار محصول، ووکامرس باید فعال باشد."
+
+msgid "Product content updated"
+msgstr "محتوای محصول به‌روزرسانی شد"
+
+msgid "Product content updated."
+msgstr "محتوای محصول به‌روزرسانی شد."
+
+msgid "Product created successfully!"
+msgstr "محصول با موفقیت ایجاد شد!"
+
+msgid "Product edited outside workflow form."
+msgstr "محصول خارج از فرم گردش کار ویرایش شد."
+
+msgid "Product edited outside workflow form. Approval reset; review again."
+msgstr "محصول خارج از فرم گردش کار ویرایش شد. تأیید لغو شد؛ بررسی مجدد لازم است."
+
+msgid "Product images and reference material"
+msgstr "تصاویر محصول و فایل‌های مرجع"
+
+msgid "Product images updated"
+msgstr "تصاویر محصول به‌روزرسانی شد"
+
+msgid "Product information"
+msgstr "اطلاعات محصول"
+
+msgid "Product name"
+msgstr "نام محصول"
+
+msgid "Product name cannot be empty."
+msgstr "نام محصول نمی‌تواند خالی باشد."
+
+msgid "Product name cannot be empty. Please enter the name:"
+msgstr "نام محصول نمی‌تواند خالی باشد. لطفاً نام را وارد کنید:"
+
+msgid "Product name:"
+msgstr "نام محصول:"
+
+msgid "Product not found."
+msgstr "محصول پیدا نشد."
+
+msgid "Product or SKU"
+msgstr "محصول یا کد کالا"
+
+msgid "Product setup completed!"
+msgstr "ثبت محصول تکمیل شد!"
+
+msgid "Products: %d"
+msgstr "تعداد محصولات: %d"
+
+msgid "Publication withdrawn"
+msgstr "انتشار لغو شد"
+
+msgid "Publish WooCommerce product"
+msgstr "انتشار محصول در ووکامرس"
+
+msgid "Publish through the workflow after approval. Editing an approved product resets its review."
+msgstr "پس از تأیید، محصول را از طریق گردش کار منتشر کنید. ویرایش محصول تأییدشده، آن را دوباره به مرحله بررسی برمی‌گرداند."
+
+msgid "Published"
+msgstr "منتشرشده"
+
+msgid "Ready for Social"
+msgstr "آماده تحویل به شبکه‌های اجتماعی"
+
+msgid "Recent chats detected from bot"
+msgstr "گفتگوهای اخیر شناسایی‌شده از ربات"
+
+msgid "Regular price"
+msgstr "قیمت عادی"
+
+msgid "Rejection reason (required)"
+msgstr "دلیل رد (الزامی)"
+
+msgid "Remove Workflow Role"
+msgstr "حذف نقش فرآیند"
+
+msgid "Review"
+msgstr "بررسی"
+
+msgid "SEO description"
+msgstr "توضیحات سئو"
+
+msgid "SEO fields are preparation notes stored with this product. Connect your SEO plugin to use them on the storefront."
+msgstr "فیلدهای سئو به‌عنوان اطلاعات آماده‌سازی همراه محصول ذخیره می‌شوند. برای استفاده در فروشگاه، افزونه سئوی خود را متصل کنید."
+
+msgid "SEO title"
+msgstr "عنوان سئو"
+
+msgid "SKU"
+msgstr "کد کالا"
+
+msgid "SKU:"
+msgstr "شناسه محصول (SKU):"
+
+msgid "SKU: %s · WooCommerce: %s"
+msgstr "کد کالا: %s · ووکامرس: %s"
+
+msgid "Save %s assignment"
+msgstr "ذخیره مسئول %s"
+
+msgid "Save Settings"
+msgstr "ذخیره تنظیمات"
+
+msgid "Save content"
+msgstr "ذخیره محتوا"
+
+msgid "Save image selection"
+msgstr "ذخیره انتخاب تصاویر"
+
+msgid "Saved successfully."
+msgstr "با موفقیت ذخیره شد."
+
+msgid "Scheduled"
+msgstr "زمان‌بندی‌شده"
+
+msgid "Select User"
+msgstr "انتخاب کاربر"
+
+msgid "Send Test Message"
+msgstr "ارسال پیام آزمایشی"
+
+msgid "Send an immediate test alert to verify your Bot Token and Chat ID."
+msgstr "یک هشدار آزمایشی فوری ارسال کنید تا توکن ربات و شناسه گفتگوی خود را بررسی نمایید."
+
+msgid "Send images one by one or as an album. Click /done when finished."
+msgstr "عکس‌ها را تک‌تک یا به صورت آلبوم بفرستید. پس از اتمام روی /done بزنید."
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Settings saved successfully."
+msgstr "تنظیمات با موفقیت ذخیره شد."
+
+msgid "Shop Manager"
+msgstr "مدیر فروشگاه"
+
+msgid "Short description"
+msgstr "توضیحات کوتاه"
+
+msgid "Social"
+msgstr "شبکه‌های اجتماعی"
+
+msgid "Social Media"
+msgstr "شبکه‌های اجتماعی"
+
+msgid "Stage"
+msgstr "مرحله"
+
+msgid "Stage changed"
+msgstr "مرحله تغییر کرد"
+
+msgid "Stock status"
+msgstr "وضعیت موجودی"
+
+msgid "Supported Catalogs"
+msgstr "فهرست‌های پشتیبانی‌شده"
+
+msgid "System / deleted user"
+msgstr "سیستم / کاربر حذف‌شده"
+
+msgid "Tags"
+msgstr "برچسب‌ها"
+
+msgid "Target Chat ID"
+msgstr "شناسه گفتگوی مقصد"
+
+msgid "Task assigned"
+msgstr "وظیفه تخصیص یافت"
+
+msgid "Task assigned to a team member"
+msgstr "کار به یکی از اعضای تیم واگذار شد"
+
+msgid "Task notifications for this user will be delivered to this Telegram Chat ID."
+msgstr "اعلان‌های کار برای این کاربر به این شناسه گفتگوی تلگرام ارسال خواهد شد."
+
+msgid "Team & Role Management"
+msgstr "مدیریت تیم و نقش‌ها"
+
+msgid "Team & Roles"
+msgstr "تیم و نقش‌ها"
+
+msgid "Team Members"
+msgstr "اعضای تیم"
+
+msgid "Telegram API"
+msgstr "رابط تلگرام"
+
+msgid "Telegram Bot API"
+msgstr "رابط ربات تلگرام"
+
+msgid "Telegram Chat ID"
+msgstr "شناسه گفتگوی تلگرام"
+
+msgid "Telegram Notifications"
+msgstr "اعلان‌های تلگرام"
+
+msgid "Telegram bot token is not configured."
+msgstr "توکن ربات تلگرام پیکربندی نشده است."
+
+msgid "Telegram message could not be sent."
+msgstr "پیام تلگرام ارسال نشد."
+
+msgid "Telegram sends user messages and photos to this secure HTTPS REST API endpoint."
+msgstr "تلگرام پیام‌ها و عکس‌های کاربران را به این آدرس امن HTTPS REST API ارسال می‌کند."
+
+msgid "Telegram test failed: %s"
+msgstr "آزمایش تلگرام ناموفق بود: %s"
+
+msgid "Telegram webhook removed."
+msgstr "وبهوک تلگرام حذف شد."
+
+msgid "Telegram webhook set successfully."
+msgstr "وبهوک تلگرام با موفقیت ثبت شد."
+
+msgid "Test Telegram Connection"
+msgstr "آزمایش اتصال تلگرام"
+
+msgid "Test message sent successfully via Telegram."
+msgstr "پیام آزمایشی با موفقیت از طریق تلگرام ارسال شد."
+
+msgid "The audit record could not be saved. Please retry."
+msgstr "ثبت رویداد در تاریخچه انجام نشد. دوباره تلاش کنید."
+
+msgid "The product must be published before social handoff."
+msgstr "محصول باید پیش از تحویل به تیم شبکه‌های اجتماعی منتشر شده باشد."
+
+msgid "The workflow changed. Refresh before trying again."
+msgstr "گردش کار تغییر کرده است. پیش از تلاش مجدد، صفحه را تازه‌سازی کنید."
+
+msgid "The workflow editor supports simple products. Use the WooCommerce editor for other product types."
+msgstr "ویرایشگر گردش کار از محصولات ساده پشتیبانی می‌کند. برای سایر انواع محصول، از ویرایشگر ووکامرس استفاده کنید."
+
+msgid "This product is being updated. Please retry."
+msgstr "این محصول در حال به‌روزرسانی است. دوباره تلاش کنید."
+
+msgid "Time / person"
+msgstr "زمان / شخص"
+
+msgid "Times are shown in the site timezone."
+msgstr "زمان‌ها بر اساس منطقه زمانی سایت نمایش داده می‌شوند."
+
+msgid "Track each product from factory introduction to social handoff."
+msgstr "هر محصول را از معرفی در کارخانه تا تحویل به تیم شبکه‌های اجتماعی پیگیری کنید."
+
+msgid "Trash"
+msgstr "زباله‌دان"
+
+msgid "Type /cancel to abort at any time"
+msgstr "در هر مرحله با ارسال /cancel می‌توانید عملیات را لغو کنید"
+
+msgid "Unassigned"
+msgstr "تخصیص نیافته"
+
+msgid "Unknown action."
+msgstr "عملیات ناشناخته است."
+
+msgid "Unknown category or tag."
+msgstr "دسته‌بندی یا برچسب ناشناخته است."
+
+msgid "Unknown workflow stage."
+msgstr "مرحله گردش کار ناشناخته است."
+
+msgid "Unsupported language."
+msgstr "این زبان پشتیبانی نمی‌شود."
+
+msgid "Update Role & Telegram"
+msgstr "به‌روزرسانی نقش و تلگرام"
+
+msgid "Updated by"
+msgstr "به‌روزرسانی شده توسط"
+
+msgid "Upload JPEG, PNG or WebP"
+msgstr "بارگذاری JPEG، PNG یا WebP"
+
+msgid "Upload and select a main product image first."
+msgstr "ابتدا تصویر اصلی محصول را بارگذاری و انتخاب کنید."
+
+msgid "Upload image"
+msgstr "بارگذاری تصویر"
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "User not found."
+msgstr "کاربر یافت نشد."
+
+msgid "User role and Telegram settings updated successfully."
+msgstr "نقش کاربر و تنظیمات تلگرام با موفقیت به‌روزرسانی شد."
+
+msgid "View assigned product"
+msgstr "مشاهده محصول واگذارشده"
+
+msgid "View published product"
+msgstr "مشاهده محصول منتشرشده"
+
+msgid "View your active assigned tasks"
+msgstr "مشاهده کارهای واگذارشده فعال شما"
+
+msgid "Waiting for Content"
+msgstr "در انتظار محتوا"
+
+msgid "Waiting for Photography"
+msgstr "در انتظار عکاسی"
+
+msgid "Waiting for Review"
+msgstr "در انتظار بررسی"
+
+msgid "Webhook Status"
+msgstr "وضعیت وبهوک"
+
+msgid "Webhook URL"
+msgstr "آدرس وبهوک"
+
+msgid "Welcome to Product Workflow!"
+msgstr "به سیستم فرآیند محصول خوش آمدید!"
+
+msgid "WooCommerce draft product ID"
+msgstr "شناسه محصول پیش‌نویس ووکامرس"
+
+msgid "WooCommerce edit"
+msgstr "ویرایش در ووکامرس"
+
+msgid "WooCommerce publication failed."
+msgstr "انتشار در ووکامرس انجام نشد."
+
+msgid "WordPress Default"
+msgstr "پیش‌فرض وردپرس"
+
+msgid "Workflow Role"
+msgstr "نقش فرآیند"
+
+msgid "Workflow Settings"
+msgstr "تنظیمات فرآیند"
+
+msgid "Workflow changed; please retry."
+msgstr "گردش کار تغییر کرده است؛ دوباره تلاش کنید."
+
+msgid "Workflow changed; refresh the product before editing."
+msgstr "گردش کار تغییر کرده است؛ پیش از ویرایش، صفحه محصول را تازه‌سازی کنید."
+
+msgid "Workflow could not be initialized."
+msgstr "راه‌اندازی گردش کار ممکن نشد."
+
+msgid "Workflow created"
+msgstr "گردش کار ایجاد شد"
+
+msgid "Workflow history"
+msgstr "تاریخچه گردش کار"
+
+msgid "Workflow product not found."
+msgstr "محصول گردش کار پیدا نشد."
+
+msgid "Workflow stage / status changed"
+msgstr "مرحله / وضعیت فرآیند تغییر کرد"
+
+msgid "You can add new products and manage your workflow tasks directly from Telegram."
+msgstr "می‌توانید مستقیماً از تلگرام محصولات جدید اضافه کنید و کارهای فرآیند خود را مدیریت نمایید."
+
+msgid "You cannot access this workflow."
+msgstr "شما به این گردش کار دسترسی ندارید."
+
+msgid "You cannot assign tasks."
+msgstr "شما اجازه تخصیص وظایف را ندارید."
+
+msgid "You cannot create products."
+msgstr "شما اجازه ایجاد محصول را ندارید."
+
+msgid "You cannot enroll this product."
+msgstr "شما اجازه افزودن این محصول به گردش کار را ندارید."
+
+msgid "You cannot perform this transition."
+msgstr "شما اجازه انجام این تغییر مرحله را ندارید."
+
+msgid "You cannot upload to this product at this stage."
+msgstr "در این مرحله اجازه بارگذاری فایل برای این محصول را ندارید."
+
+msgid "You do not have access to this product."
+msgstr "شما به این محصول دسترسی ندارید."
+
+msgid "You do not have permission to create products."
+msgstr "شما مجوز ایجاد محصول را ندارید."
+
+msgid "You have no active pending tasks right now."
+msgstr "در حال حاضر کار در انتظار فعالی ندارید."
+
+msgid "Your Active Tasks:"
+msgstr "کارهای فعال شما:"
+
+msgid "Your Telegram ID is:"
+msgstr "شناسه تلگرام شما:"
+
+msgid "Your account is not linked to any WordPress user yet. Please ask your store administrator to set your Telegram Chat ID in Workflow Settings."
+msgstr "حساب کاربری شما هنوز به هیچ کاربری در وردپرس متصل نشده است. لطفاً از مدیر فروشگاه بخواهید شناسه تلگرام شما را در تنظیمات فرآیند ثبت کند."
+
+msgid "Your assigned work that is ready for action, plus new product requests you created."
+msgstr "وظایف تخصیص‌یافته و آماده انجام شما، به‌همراه درخواست‌های محصول جدیدی که ایجاد کرده‌اید."
+
+msgid "e.g. 123456789"
+msgstr "به عنوان مثال 123456789"
+
