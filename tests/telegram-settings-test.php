@@ -99,6 +99,8 @@ function submit_button($text = null, $type = 'primary', $name = 'submit', $wrap 
 class WP_Error {
     public function __construct(public $code, public $message, public $data = array()) {}
     public function get_error_message() { return $this->message; }
+    public function get_error_code() { return $this->code; }
+    public function get_error_data() { return $this->data; }
 }
 function is_wp_error($val) { return $val instanceof WP_Error; }
 
@@ -510,18 +512,42 @@ assert_test(in_array('pwf_reviewer', $admin->roles, true), 'Admin gained pwf_rev
 assert_test(get_user_meta(1, 'pwf_telegram_chat_id', true) === '99887766', 'Admin telegram chat ID updated');
 
 class MockRESTRequest {
-    public function __construct(public $params = array()) {}
+    public function __construct(public $params = array(), public $headers = array()) {
+        if (!isset($this->headers['x_telegram_bot_api_secret_token']) && !isset($this->headers['x-telegram-bot-api-secret-token'])) {
+            $secret = PWF_Telegram_Client::get_webhook_secret();
+            $this->headers['x_telegram_bot_api_secret_token'] = $secret;
+        }
+    }
     public function get_json_params() { return $this->params; }
     public function get_body() { return json_encode($this->params); }
+    public function get_header($name) { return $this->headers[strtolower($name)] ?? ''; }
 }
 
-// TEST 12: Webhook URL generation & set_webhook
+// TEST 12: Webhook URL generation & set_webhook with secret_token
 assert_test(PWF_Telegram::get_webhook_url() === 'https://example.com/wp-json/product-workflow/v1/telegram/webhook', 'Webhook URL matches expected route');
 $set_res = PWF_Telegram::set_webhook();
 assert_test($set_res === true, 'set_webhook succeeds');
+assert_test(!empty($GLOBALS['http_requests']), 'setWebhook sent HTTP request');
+$last_req = end($GLOBALS['http_requests']);
+assert_test(!empty($last_req['args']['body']['secret_token']), 'setWebhook included secret_token parameter');
+assert_test($last_req['args']['body']['secret_token'] === PWF_Telegram_Client::get_webhook_secret(), 'secret_token matches stored webhook secret');
+
+// Test webhook authentication defenses:
+$unauth_req = new MockRESTRequest(array('message' => array('text' => '/start')), array('x_telegram_bot_api_secret_token' => ''));
+$perm_unauth = PWF_Telegram::verify_webhook_permission($unauth_req);
+assert_test(is_wp_error($perm_unauth) && $perm_unauth->get_error_data()['status'] === 403, 'Webhook request without secret token is rejected with 403');
+
+$forged_req = new MockRESTRequest(array('message' => array('text' => '/start')), array('x_telegram_bot_api_secret_token' => 'forged_fake_token'));
+$perm_forged = PWF_Telegram::verify_webhook_permission($forged_req);
+assert_test(is_wp_error($perm_forged) && $perm_forged->get_error_data()['status'] === 403, 'Webhook request with forged secret token is rejected with 403');
+
+$valid_req = new MockRESTRequest(array('message' => array('text' => '/start')));
+$perm_valid = PWF_Telegram::verify_webhook_permission($valid_req);
+assert_test($perm_valid === true, 'Webhook request with valid secret token succeeds');
 
 // Setup Factory user for interactive bot testing
 $GLOBALS['users'][4] = new TestUser(4, array('pwf_factory'), 'Factory User', 'factory');
+$GLOBALS['users'][4]->roles = array('pwf_factory');
 update_user_meta(4, 'pwf_telegram_chat_id', '55443322');
 
 // TEST 13: Webhook unlinked user receiving /start

@@ -10,9 +10,10 @@ version = m.group(1) if m else '1.0.0'
 
 output = root / 'dist' / f'product-workflow-{version}.zip'
 output.parent.mkdir(exist_ok=True)
-root_files = ('product-workflow.php', 'readme.txt', 'uninstall.php', 'README.md', 'DESIGN.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md')
+# Production files for WordPress.org directory submission
+root_files = ('product-workflow.php', 'readme.txt', 'uninstall.php', 'LICENSE', 'CHANGELOG.md', 'SECURITY.md')
 files = [root / name for name in root_files if (root / name).is_file()]
-for directory in ('admin', 'api', 'assets', 'includes', 'integrations', 'languages', 'tests'):
+for directory in ('admin', 'api', 'assets', 'includes', 'integrations', 'languages'):
     files.extend(path for path in (root / directory).rglob('*') if path.is_file())
 with ZipFile(output, 'w', ZIP_DEFLATED) as archive:
     for path in sorted(files):

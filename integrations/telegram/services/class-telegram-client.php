@@ -63,19 +63,30 @@ class PWF_Telegram_Client {
         return get_rest_url(null, 'product-workflow/v1/telegram/webhook');
     }
 
-    public static function set_webhook($token = null, $url = null) {
+    public static function get_webhook_secret() {
+        $secret = (string) get_option('pwf_telegram_webhook_secret', '');
+        if (empty($secret)) {
+            $secret = wp_generate_password(32, false);
+            update_option('pwf_telegram_webhook_secret', $secret);
+        }
+        return $secret;
+    }
+
+    public static function set_webhook($token = null, $url = null, $secret = null) {
         $bot_token = $token ?: self::get_token();
         if (empty($bot_token)) {
             return new WP_Error('no_token', pwf_t('Telegram bot token is not configured.'));
         }
         $endpoint = self::API_BASE . $bot_token . '/setWebhook';
         $webhook_url = $url ?: self::get_webhook_url();
+        $secret_token = $secret ?: self::get_webhook_secret();
         $response = wp_remote_post($endpoint, array(
             'timeout'   => 15,
             'sslverify' => true,
             'body'      => array(
                 'url'                  => $webhook_url,
                 'drop_pending_updates' => false,
+                'secret_token'         => $secret_token,
             ),
         ));
 

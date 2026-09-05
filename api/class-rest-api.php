@@ -34,7 +34,7 @@ class PWF_REST_API {
             }
             register_rest_route('product-workflow/v1', '/telegram/webhook', array(
                 'methods'             => 'POST',
-                'permission_callback' => '__return_true',
+                'permission_callback' => array('PWF_Telegram', 'verify_webhook_permission'),
                 'callback'            => function ($request) {
                     return PWF_Telegram::handle_webhook($request);
                 },

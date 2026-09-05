@@ -58,8 +58,32 @@ class PWF_Telegram {
         return PWF_Telegram_Client::get_webhook_url();
     }
 
-    public static function set_webhook($token = null, $url = null) {
-        return PWF_Telegram_Client::set_webhook($token, $url);
+    public static function get_webhook_secret() {
+        return PWF_Telegram_Client::get_webhook_secret();
+    }
+
+    public static function set_webhook($token = null, $url = null, $secret = null) {
+        return PWF_Telegram_Client::set_webhook($token, $url, $secret);
+    }
+
+    public static function verify_webhook_permission($request) {
+        $secret = self::get_webhook_secret();
+        if (empty($secret)) {
+            return new WP_Error('rest_forbidden', pwf_t('Telegram webhook secret is not configured.'), array('status' => 403));
+        }
+
+        $header_token = '';
+        if (is_object($request) && method_exists($request, 'get_header')) {
+            $header_token = $request->get_header('x_telegram_bot_api_secret_token') ?: $request->get_header('x-telegram-bot-api-secret-token');
+        } elseif (isset($_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'])) {
+            $header_token = sanitize_text_field(wp_unslash($_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN']));
+        }
+
+        if (empty($header_token) || !hash_equals($secret, (string) $header_token)) {
+            return new WP_Error('rest_forbidden', pwf_t('Unauthorized Telegram webhook request.'), array('status' => 403));
+        }
+
+        return true;
     }
 
     public static function delete_webhook($token = null) {
@@ -200,9 +224,15 @@ class PWF_Telegram {
 
     // --- WEBHOOK ROUTER & ORCHESTRATOR ---
     public static function handle_webhook($request) {
-        $data = $request->get_json_params();
+        $permission = self::verify_webhook_permission($request);
+        if (is_wp_error($permission)) {
+            return $permission;
+        }
+
+        $data = is_object($request) && method_exists($request, 'get_json_params') ? $request->get_json_params() : array();
         if (empty($data) || !is_array($data)) {
-            $data = json_decode($request->get_body(), true) ?: array();
+            $body = is_object($request) && method_exists($request, 'get_body') ? $request->get_body() : '';
+            $data = json_decode($body, true) ?: array();
         }
 
         $message = $data['message'] ?? null;
