@@ -6,14 +6,29 @@
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Requires Plugins: woocommerce
- * Text Domain: product-workflow
- * Author: AliABZ
+ * Author: Ali Abdollahzadeh
  * Author URI: https://aliabdollahzadeh.dev/
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: product-workflow
+ * Domain Path: /languages
  */
 defined('ABSPATH') || exit;
 define('PWF_VERSION', '1.2.0');
 define('PWF_DIR', plugin_dir_path(__FILE__));
 define('PWF_URL', plugin_dir_url(__FILE__));
+
+// Declare WooCommerce HPOS compatibility.
+add_action('before_woocommerce_init', function () {
+    if (class_exists('\Automattic\WooCommerce\Utilities\FeaturesUtil')) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+    }
+});
+
+add_action('init', function () {
+    load_plugin_textdomain('product-workflow', false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
+
 require_once PWF_DIR . 'includes/class-i18n.php';
 PWF_I18n::boot();
 foreach (array('permission', 'history', 'assignment', 'notification', 'workflow') as $module) {

@@ -26,16 +26,6 @@ class PWF_Admin {
                 wp_enqueue_style('pwf-admin', $css_url, array('dashicons'), PWF_VERSION);
             }
         });
-        add_action('admin_head', function () {
-            $page = isset($_GET['page']) ? sanitize_key($_GET['page']) : '';
-            $is_pwf = (strpos($page, 'pwf') !== false) || (function_exists('get_post_type') && get_post_type() === 'product');
-            if ($is_pwf) {
-                $css_file = defined('PWF_DIR') ? PWF_DIR . 'assets/admin.css' : (dirname(__DIR__) . '/assets/admin.css');
-                if (file_exists($css_file)) {
-                    echo '<style id="pwf-admin-inline-css">' . file_get_contents($css_file) . '</style>';
-                }
-            }
-        });
         // WooCommerce normally redirects non-manager roles away from wp-admin.
         add_filter('woocommerce_prevent_admin_access', function ($prevent) { return current_user_can('view_assigned_products') ? false : $prevent; });
     }

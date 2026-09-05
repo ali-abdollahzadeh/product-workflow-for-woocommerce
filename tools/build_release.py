@@ -10,7 +10,8 @@ version = m.group(1) if m else '1.0.0'
 
 output = root / 'dist' / f'product-workflow-{version}.zip'
 output.parent.mkdir(exist_ok=True)
-files = [root / name for name in ('product-workflow.php', 'README.md', 'DESIGN.md')]
+root_files = ('product-workflow.php', 'readme.txt', 'uninstall.php', 'README.md', 'DESIGN.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md')
+files = [root / name for name in root_files if (root / name).is_file()]
 for directory in ('admin', 'api', 'assets', 'includes', 'integrations', 'languages', 'tests'):
     files.extend(path for path in (root / directory).rglob('*') if path.is_file())
 with ZipFile(output, 'w', ZIP_DEFLATED) as archive:
