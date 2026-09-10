@@ -63,7 +63,7 @@ class PWF_I18n {
     }
 
     public static function stage($stage) {
-        $labels = array('photography' => 'Photography', 'content' => 'Content', 'review' => 'Review', 'social' => 'Social');
+        $labels = array('photography' => 'Photography', 'content' => 'Content', 'review' => 'Review', 'social' => 'Social', 'programming' => 'Programming');
         return pwf_t($labels[$stage] ?? $stage);
     }
 

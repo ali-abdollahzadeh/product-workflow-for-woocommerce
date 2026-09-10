@@ -485,10 +485,158 @@ class PWF_Telegram {
             return array('ok' => true);
         }
 
+        // 10. View Execution Task: /task_123 or "👁️ جزئیات #123"
+        if (preg_match('/^(?:\/task_|👁️\s*جزئیات\s*#?)(\d+)$/ui', $text, $tm)) {
+            $task_id = (int) $tm[1];
+            if (!class_exists('PWF_Task_Manager')) {
+                self::send_message($chat_id, '❌ سیستم وظایف در دسترس نیست.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+            $t = PWF_Task_Manager::get($task_id);
+            if (!$t) {
+                self::send_message($chat_id, '❌ وظیفه مورد نظر یافت نشد.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+            if ((int) $t->assigned_to !== (int) $wp_user->ID && !PWF_Telegram_Auth::is_manager($wp_user)) {
+                self::send_message($chat_id, '⛔ شما به این وظیفه دسترسی ندارید.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+
+            $type_label = PWF_Task_Manager::types()[$t->task_type]['label'] ?? $t->task_type;
+            $priority_label = PWF_Task_Manager::priorities()[$t->priority] ?? $t->priority;
+            $status_label = PWF_Task_Manager::statuses()[$t->status] ?? $t->status;
+
+            $msg = "📋 <b>وظیفه #{$t->task_id}: " . esc_html($t->title) . "</b>\n"
+                 . "━━━━━━━━━━━━━━━━━━\n"
+                 . "🏷️ <b>نوع کار:</b> " . esc_html($type_label) . "\n"
+                 . "⚡ <b>اولویت:</b> " . esc_html($priority_label) . "\n"
+                 . "📊 <b>وضعیت فعلی:</b> " . esc_html($status_label) . "\n"
+                 . "📅 <b>مهلت سررسید:</b> " . esc_html($t->due_date ?: 'ندارد') . "\n";
+
+            if ($t->product_id) {
+                $p = wc_get_product($t->product_id);
+                $p_title = $p ? $p->get_name() : ('#' . $t->product_id);
+                $msg .= "📦 <b>محصول متصل:</b> " . esc_html($p_title) . " (#{$t->product_id})\n";
+            }
+
+            if (!empty($t->description)) {
+                $clean_desc = strip_tags($t->description);
+                $msg .= "\n📝 <b>توضیحات و راهنمای کار:</b>\n" . esc_html($clean_desc) . "\n";
+            }
+
+            $kb = array();
+            if ($t->status === 'assigned') {
+                $msg .= "\n<i>برای شروع این کار، روی دکمه «🚀 شروع کار» کلیک کنید.</i>";
+                $kb[] = array('🚀 شروع کار #' . $t->task_id);
+            } elseif (in_array($t->status, array('in_progress', 'needs_revision'), true)) {
+                $msg .= "\n<i>برای تحویل خروجی (فایل، عکس یا توضیحات و لینک)، روی دکمه «📤 تحویل خروجی» بزنید.</i>";
+                $kb[] = array('📤 تحویل خروجی #' . $t->task_id);
+            }
+
+            $kb[] = array('📋 ' . pwf_t('My Tasks'));
+            self::send_message($chat_id, $msg, $kb);
+            return array('ok' => true);
+        }
+
+        // 11. Start Task: /start_task_123 or "🚀 شروع کار #123"
+        if (preg_match('/^(?:\/start_task_|🚀\s*شروع\s*کار\s*#?)(\d+)$/ui', $text, $stm)) {
+            $task_id = (int) $stm[1];
+            if (!class_exists('PWF_Task_Manager')) {
+                self::send_message($chat_id, '❌ سیستم وظایف در دسترس نیست.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+            $res = PWF_Task_Manager::start($task_id);
+            if (is_wp_error($res)) {
+                self::send_message($chat_id, '❌ خطا: ' . $res->get_error_message(), self::main_menu_keyboard());
+            } else {
+                $msg = "🚀 <b>وظیفه #{$task_id} به وضعیت «در حال انجام» تغییر یافت!</b>\n\n"
+                     . "پس از آماده‌سازی، با زدن دکمه «📤 تحویل خروجی» فایل‌ها، لینک یا توضیحات کار خود را ارسال کنید تا برای بازبینی مدیریت ثبت شود.";
+                self::send_message($chat_id, $msg, array(
+                    array('📤 تحویل خروجی #' . $task_id),
+                    array('📋 ' . pwf_t('My Tasks'))
+                ));
+            }
+            return array('ok' => true);
+        }
+
+        // 12. Submit Deliverable prompt: /submit_task_123 or "📤 تحویل خروجی #123"
+        if (preg_match('/^(?:\/submit_task_|📤\s*تحویل\s*خروجی\s*#?)(\d+)$/ui', $text, $sbm)) {
+            $task_id = (int) $sbm[1];
+            if (!class_exists('PWF_Task_Manager')) {
+                self::send_message($chat_id, '❌ سیستم وظایف در دسترس نیست.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+            $t = PWF_Task_Manager::get($task_id);
+            if (!$t) {
+                self::send_message($chat_id, '❌ وظیفه مورد نظر یافت نشد.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+
+            self::set_session($chat_id, 'task_submit', array('task_id' => $task_id));
+            $msg = "📤 <b>تحویل خروجی برای وظیفه #{$task_id} («" . esc_html($t->title) . "»)</b>\n\n"
+                 . "لطفاً توضیحات کار، لینک خروجی (مانند گیت‌هاب، فیگما، درایو و...) یا <b>عکس/فایل خروجی</b> خود را همینجا ارسال فرمایید:\n\n"
+                 . "<i>(برای لغو /cancel را ارسال کنید)</i>";
+            self::send_message($chat_id, $msg, array(array('/cancel')));
+            return array('ok' => true);
+        }
+
         // Conversation Session State Machine
         $session = self::get_session($chat_id);
         $step = $session['step'] ?? 'idle';
         $sess_data = $session['data'] ?? array();
+
+        // STEP: Submitting deliverable for an execution task
+        if ($step === 'task_submit') {
+            $task_id = (int) ($sess_data['task_id'] ?? 0);
+            if (!$task_id || !class_exists('PWF_Task_Manager')) {
+                self::clear_session($chat_id);
+                self::send_message($chat_id, '❌ جلسه منقضی شده است.', self::main_menu_keyboard());
+                return array('ok' => true);
+            }
+
+            $deliverable_url = '';
+            $deliverable_note = '';
+
+            // If user sent a photo
+            if (!empty($photos) && is_array($photos)) {
+                $best = end($photos);
+                $fid = $best['file_id'] ?? '';
+                if ($fid) {
+                    $dl = PWF_Telegram_Media::download_deliverable_file($fid, $task_id);
+                    if ($dl) {
+                        $task = PWF_Task_Manager::get($task_id);
+                        $existing = !empty($task->deliverable_files) ? json_decode($task->deliverable_files, true) : array();
+                        $existing[] = $dl;
+                        global $wpdb;
+                        $wpdb->update($wpdb->prefix . 'pwf_tasks', array('deliverable_files' => wp_json_encode($existing)), array('task_id' => $task_id));
+                        $deliverable_note = 'فایل خروجی از طریق تلگرام ارسال شد.';
+                    }
+                }
+            } elseif (!empty($text)) {
+                // Check if text contains URL
+                if (preg_match('/(https?:\/\/[^\s]+)/ui', $text, $url_match)) {
+                    $deliverable_url = $url_match[1];
+                    $deliverable_note = trim(str_replace($deliverable_url, '', $text));
+                    if (empty($deliverable_note)) {
+                        $deliverable_note = 'لینک خروجی از طریق تلگرام تحویل داده شد.';
+                    }
+                } else {
+                    $deliverable_note = $text;
+                }
+            }
+
+            $res = PWF_Task_Manager::submit($task_id, $deliverable_url, $deliverable_note);
+            self::clear_session($chat_id);
+
+            if (is_wp_error($res)) {
+                self::send_message($chat_id, '❌ خطا در ثبت تحویل کار: ' . $res->get_error_message(), self::main_menu_keyboard());
+            } else {
+                $success_msg = "🎉 <b>خروجی وظیفه #{$task_id} با موفقیت ثبت شد!</b>\n\n"
+                             . "وضعیت وظیفه به «تحویل‌شده» (Submitted) تغییر یافت و برای بررسی کیفی و تایید به واحد مدیریت ارسال گردید.";
+                self::send_message($chat_id, $success_msg, self::main_menu_keyboard());
+            }
+            return array('ok' => true);
+        }
 
         // 10. Handle /new or tapping "➕ New Product"
         if ($is_new) {

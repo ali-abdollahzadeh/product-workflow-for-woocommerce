@@ -119,6 +119,24 @@ class PWF_Telegram_Task {
             $valid_tasks[] = array('task' => $task, 'product' => $prod);
         }
 
+        // 4. Granular execution tasks from pwf_tasks table (Programmer, Social, Print, Custom)
+        $has_tasks_tbl = $wpdb->get_var("SHOW TABLES LIKE '{$wpdb->prefix}pwf_tasks'");
+        if ($has_tasks_tbl) {
+            $exec_tasks = (array) $wpdb->get_results($wpdb->prepare(
+                "SELECT t.* FROM {$wpdb->prefix}pwf_tasks t
+                 WHERE t.assigned_to = %d AND t.status IN ('assigned', 'in_progress', 'needs_revision')
+                 ORDER BY FIELD(t.priority, 'urgent', 'high', 'normal', 'low'), t.due_date ASC LIMIT 10",
+                $wp_user->ID
+            ));
+
+            foreach ($exec_tasks as $et) {
+                $valid_tasks[] = array(
+                    'is_exec_task' => true,
+                    'task'         => $et,
+                );
+            }
+        }
+
         return $valid_tasks;
     }
 
@@ -145,6 +163,31 @@ class PWF_Telegram_Task {
         $custom_keyboard = array();
 
         foreach ($valid_tasks as $item) {
+            if (!empty($item['is_exec_task'])) {
+                $t = $item['task'];
+                $tid = (int) $t->task_id;
+                $type_label = class_exists('PWF_Task_Manager') ? (PWF_Task_Manager::types()[$t->task_type]['label'] ?? $t->task_type) : $t->task_type;
+                $priority_label = class_exists('PWF_Task_Manager') ? (PWF_Task_Manager::priorities()[$t->priority] ?? $t->priority) : $t->priority;
+                $status_label = class_exists('PWF_Task_Manager') ? (PWF_Task_Manager::statuses()[$t->status] ?? $t->status) : $t->status;
+
+                $msg .= "📌 <b>وظیفه #{$tid}: " . esc_html($t->title) . "</b>\n";
+                $msg .= "  🏷️ نوع: " . esc_html($type_label) . "\n";
+                $msg .= "  ⚡ اولویت: " . esc_html($priority_label) . " | 📊 وضعیت: " . esc_html($status_label) . "\n";
+                if (!empty($t->due_date)) {
+                    $msg .= "  📅 مهلت سررسید: " . esc_html($t->due_date) . "\n";
+                }
+                $msg .= "  👁️ مشاهده جزئیات: /task_" . $tid . "\n";
+                if ($t->status === 'assigned') {
+                    $msg .= "  🚀 شروع کار: /start_task_" . $tid . "\n";
+                    $custom_keyboard[] = array('👁️ جزئیات #' . $tid, '🚀 شروع کار #' . $tid);
+                } else {
+                    $msg .= "  📤 تحویل خروجی: /submit_task_" . $tid . "\n";
+                    $custom_keyboard[] = array('👁️ جزئیات #' . $tid, '📤 تحویل خروجی #' . $tid);
+                }
+                $msg .= "\n";
+                continue;
+            }
+
             $task = $item['task'];
             $prod = $item['product'];
             $pid = (int) $task->product_id;

@@ -111,11 +111,15 @@ class PWF_Settings {
         // Fetch users
         $users = get_users(array('number' => 100, 'orderby' => 'display_name', 'order' => 'ASC'));
         $role_names = array(
-            'pwf_factory'         => pwf_t('Factory'),
+            'pwf_factory'         => pwf_t('Factory (Secretary)'),
             'pwf_photographer'    => pwf_t('Photographer'),
             'pwf_content_manager' => pwf_t('Content Manager'),
             'pwf_reviewer'        => pwf_t('Product Reviewer'),
             'pwf_social'          => pwf_t('Social Media'),
+            'pwf_ceo'             => pwf_t('CEO / Factory Manager'),
+            'pwf_sales_manager'   => pwf_t('Sales Manager'),
+            'pwf_management'      => pwf_t('Management & Planning'),
+            'pwf_programmer'      => pwf_t('Programmer'),
             'administrator'       => pwf_t('Administrator'),
             'shop_manager'        => pwf_t('Shop Manager'),
         );
@@ -387,11 +391,19 @@ class PWF_Settings {
 
         echo '<p><label><strong>' . esc_html(pwf_t('Workflow Role')) . ':</strong><br>';
         echo '<select name="workflow_role" style="width:100%; margin-top:6px;" required>';
-        echo '<option value="pwf_factory">' . esc_html(pwf_t('Factory')) . '</option>';
-        echo '<option value="pwf_photographer">' . esc_html(pwf_t('Photographer')) . '</option>';
-        echo '<option value="pwf_content_manager">' . esc_html(pwf_t('Content Manager')) . '</option>';
-        echo '<option value="pwf_reviewer">' . esc_html(pwf_t('Product Reviewer')) . '</option>';
-        echo '<option value="pwf_social">' . esc_html(pwf_t('Social Media')) . '</option>';
+        echo '<optgroup label="' . esc_attr(pwf_t('Spec v2.1 Roles')) . '">';
+        echo '<option value="pwf_ceo">'        . esc_html(pwf_t('CEO / Factory Manager'))    . '</option>';
+        echo '<option value="pwf_sales_manager">' . esc_html(pwf_t('Sales Manager'))           . '</option>';
+        echo '<option value="pwf_management">' . esc_html(pwf_t('Management & Planning'))    . '</option>';
+        echo '<option value="pwf_programmer">' . esc_html(pwf_t('Programmer'))               . '</option>';
+        echo '</optgroup>';
+        echo '<optgroup label="' . esc_attr(pwf_t('Pipeline Roles')) . '">';
+        echo '<option value="pwf_factory">'         . esc_html(pwf_t('Factory (Secretary)')) . '</option>';
+        echo '<option value="pwf_photographer">'    . esc_html(pwf_t('Photographer'))        . '</option>';
+        echo '<option value="pwf_content_manager">' . esc_html(pwf_t('Content Manager'))     . '</option>';
+        echo '<option value="pwf_reviewer">'        . esc_html(pwf_t('Product Reviewer'))    . '</option>';
+        echo '<option value="pwf_social">'          . esc_html(pwf_t('Social Media'))        . '</option>';
+        echo '</optgroup>';
         echo '<option value="remove_workflow">' . esc_html(pwf_t('Remove Workflow Role')) . '</option>';
         echo '</select></label></p>';
 

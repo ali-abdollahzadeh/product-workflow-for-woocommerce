@@ -80,4 +80,48 @@ class PWF_Telegram_Media {
 
         return $attach_id;
     }
+
+    public static function download_deliverable_file($file_id, $task_id, $token = null) {
+        $bot_token = $token ?: PWF_Telegram_Client::get_token();
+        if (empty($bot_token) || empty($file_id) || empty($task_id)) {
+            return false;
+        }
+
+        $info_url = PWF_Telegram_Client::API_BASE . $bot_token . '/getFile?file_id=' . urlencode($file_id);
+        $res = wp_remote_get($info_url, array('timeout' => 15, 'sslverify' => true));
+        if (is_wp_error($res)) {
+            return false;
+        }
+
+        $info = json_decode(wp_remote_retrieve_body($res), true);
+        $file_path = $info['result']['file_path'] ?? '';
+        if (empty($file_path)) {
+            return false;
+        }
+
+        $download_url = PWF_Telegram_Client::FILE_BASE . $bot_token . '/' . $file_path;
+        $file_res = wp_remote_get($download_url, array('timeout' => 30, 'sslverify' => true));
+        if (is_wp_error($file_res)) {
+            return false;
+        }
+
+        $bytes = wp_remote_retrieve_body($file_res);
+        if (empty($bytes)) {
+            return false;
+        }
+
+        $ext = pathinfo($file_path, PATHINFO_EXTENSION) ?: 'jpg';
+        $filename = 'pwf-task-' . $task_id . '-' . time() . '-' . wp_generate_password(4, false) . '.' . $ext;
+        $upload = wp_upload_bits($filename, null, $bytes);
+        if (!empty($upload['error'])) {
+            return false;
+        }
+
+        return array(
+            'id'   => 0,
+            'name' => $filename,
+            'url'  => $upload['url'],
+            'size' => strlen($bytes),
+        );
+    }
 }

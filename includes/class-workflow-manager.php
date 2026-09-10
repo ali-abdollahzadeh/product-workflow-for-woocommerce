@@ -121,6 +121,67 @@ class PWF_Workflow_Manager {
                 update_post_meta($id, 'cbm', $cbm_val);
             }
 
+            // Process initial product reference files or photos
+            if (!empty($_FILES['product_attachments'])) {
+                require_once ABSPATH . 'wp-admin/includes/file.php';
+                require_once ABSPATH . 'wp-admin/includes/image.php';
+                require_once ABSPATH . 'wp-admin/includes/media.php';
+
+                $files = $_FILES['product_attachments'];
+                $saved_files = array();
+                $first_image_id = 0;
+
+                if (isset($files['name']) && is_array($files['name'])) {
+                    $count = count($files['name']);
+                    for ($i = 0; $i < $count; $i++) {
+                        if (empty($files['name'][$i]) || $files['error'][$i] !== UPLOAD_ERR_OK) {
+                            continue;
+                        }
+                        $file_arr = array(
+                            'name'     => sanitize_file_name($files['name'][$i]),
+                            'type'     => $files['type'][$i],
+                            'tmp_name' => $files['tmp_name'][$i],
+                            'error'    => $files['error'][$i],
+                            'size'     => $files['size'][$i],
+                        );
+                        $upload = wp_handle_upload($file_arr, array('test_form' => false));
+                        if (!empty($upload['url']) && empty($upload['error'])) {
+                            $is_img = preg_match('/\.(jpg|jpeg|png|webp|gif)$/i', $upload['url']);
+                            $attachment_id = wp_insert_attachment(array(
+                                'guid'           => $upload['url'],
+                                'post_mime_type' => $upload['type'] ?? '',
+                                'post_title'     => preg_replace('/\.[^.]+$/', '', basename($upload['file'])),
+                                'post_content'   => '',
+                                'post_status'    => 'inherit',
+                            ), $upload['file'], $id);
+
+                            if ($attachment_id && !is_wp_error($attachment_id)) {
+                                wp_update_attachment_metadata($attachment_id, wp_generate_attachment_metadata($attachment_id, $upload['file']));
+                                if ($is_img && !$first_image_id) {
+                                    $first_image_id = $attachment_id;
+                                }
+                            }
+
+                            $saved_files[] = array(
+                                'name'          => basename($upload['file']),
+                                'url'           => $upload['url'],
+                                'size'          => $files['size'][$i],
+                                'is_image'      => $is_img ? 1 : 0,
+                                'attachment_id' => $attachment_id ?: 0,
+                            );
+                        }
+                    }
+                }
+
+                if ($first_image_id) {
+                    $product->set_image_id($first_image_id);
+                    $product->save();
+                }
+                if (!empty($saved_files)) {
+                    update_post_meta($id, '_pwf_sample_files', $saved_files);
+                }
+            }
+
             $initialized = self::initialize($id);
             if (is_wp_error($initialized)) { throw new RuntimeException($initialized->get_error_message()); }
             $row = self::get($id);
@@ -235,6 +296,9 @@ class PWF_Workflow_Manager {
                 $product->set_attributes($attributes);
             }
             foreach (array('seo_title', 'seo_description') as $field) {
+                if (isset($data[$field])) { $product->update_meta_data('_pwf_' . $field, sanitize_text_field($data[$field])); }
+            }
+            foreach (array('carton_qty', 'cbm') as $field) {
                 if (isset($data[$field])) { $product->update_meta_data('_pwf_' . $field, sanitize_text_field($data[$field])); }
             }
             $product->save();
